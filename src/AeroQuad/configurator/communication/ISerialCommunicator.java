@@ -18,7 +18,9 @@ public interface ISerialCommunicator
 
     final String VEHICLE_STATE_REQUEST_MESSAGE = "#";
 
-    static String CONNECTION_STATE_CHANGE = "CONNECTION_STATE_CHANGE";
+    final String RAW_DATA_MESSAGE = "RAW_DATA_MESSAGE";
+
+    final String CONNECTION_STATE_CHANGE = "CONNECTION_STATE_CHANGE";
 
 
     void addListener(String propertyName, PropertyChangeListener propertyChangeListener);
@@ -31,4 +33,6 @@ public interface ISerialCommunicator
     void connect(String commPort);
 
     void disconnect();
+
+    void sendCommand(String command);
 }

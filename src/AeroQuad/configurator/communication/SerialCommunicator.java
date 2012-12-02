@@ -139,7 +139,7 @@ public class SerialCommunicator implements ISerialCommunicator
 
             System.out.println("Port: " + _connectedPortName + " opened");
             _isConnected = true;
-            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, new Boolean(_isConnected));
+            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, _isConnected);
             sendMessage(VEHICLE_STATE_REQUEST_MESSAGE);
         }
     }
@@ -178,8 +178,14 @@ public class SerialCommunicator implements ISerialCommunicator
 
             System.out.println("Serial Port closed!!");
             _isConnected = false;
-            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, new Boolean(_isConnected));
+            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, _isConnected);
         }
+    }
+
+    @Override
+    public void sendCommand(final String command)
+    {
+        sendMessage(command);
     }
 
 
@@ -200,7 +206,7 @@ public class SerialCommunicator implements ISerialCommunicator
                 break;
 
             case SerialPortEvent.DATA_AVAILABLE:
-                analizeIncomingData();
+                analyzeIncomingData();
                 break;
 
             default:
@@ -209,75 +215,37 @@ public class SerialCommunicator implements ISerialCommunicator
     }
 
 
-    private void analizeIncomingData()
+    private void analyzeIncomingData()
     {
-        String rawInput = null;
+        String rawData = null;
         try
         {
-            while ((rawInput = _bufferedReader.readLine()) != null)
+            while ((rawData = _bufferedReader.readLine()) != null)
             {
-
-                System.out.println(rawInput);
-
-                // Check the end of the incoming string
-                try
-                {
-//                    field = rawInput.substring(len - 2, len);
-//
-//                    num = rawInput.substring(0, len - 2);
-//
-//                    if (field.contentEquals("kp")) {
-//                        drawer.pitchValueFiltered = Integer.parseInt(num);
-//                    }
-//
-//                    if (field.contentEquals("kr")) {
-//                        drawer.rollValueFiltered = Integer.parseInt(num);
-//                    }
-//
-//                    if (field.contentEquals("ky")) {
-//                        drawer.yawValueFiltered = Integer.parseInt(num);
-//                    }
-//
-//                    if (field.contentEquals("pp")) {
-//                        drawer.pitchValuePure = Integer.parseInt(num);
-//                    }
-//
-//                    if (field.contentEquals("rr")) {
-//                        drawer.rollValuePure = Integer.parseInt(num);
-//                    }
-//
-//                    if (field.contentEquals("yy")) {
-//                        drawer.yawValuePure = Integer.parseInt(num);
-//                    }
-
-                }
-                catch (IndexOutOfBoundsException eft)
-                {
-                    System.out.println("Problem with string");
-                }
-                catch (NumberFormatException numEvt)
-                {
-                    System.out.println("Not a number, but a string");
-                }
+                handleReceivedString(rawData);
             }
-
         }
         catch (IOException e)
         {
+            //System.err.println("Incomming data error" + e);
         }
+    }
+
+    private void handleReceivedString(final String rawData)
+    {
+        _propertyChangeSupport.firePropertyChange(RAW_DATA_MESSAGE,null,rawData);
     }
 
     private void sendMessage(final String message)
     {
         try
         {
-//            _outputStream.flush();
             _outputStream.write(message.getBytes());
             _outputStream.close();
         }
         catch (IOException e)
         {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 
