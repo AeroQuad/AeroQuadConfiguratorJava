@@ -3,6 +3,8 @@ package AeroQuad.configurator.ui.mainmenue;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainMenuPanel extends JPanel implements IMainMenuPanel
 {
@@ -18,7 +20,7 @@ public class MainMenuPanel extends JPanel implements IMainMenuPanel
         _controller.setPanel(this);
         setLayout(new GridLayout(4, 0));
         init();
-        setConected(false);
+        setConnected(false);
     }
 
     private void init()
@@ -35,10 +37,37 @@ public class MainMenuPanel extends JPanel implements IMainMenuPanel
         _setupButton.setEnabled(false);
         _monitoringButton.setEnabled(false);
         _tuningButton.setEnabled(false);
+
+        _monitoringButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                _controller.processMonitoringButtonPressed();
+            }
+        });
+
+        _setupButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                _controller.processSetupButtonPressed();
+            }
+        });
+
+        _tuningButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                _controller.processTuningButtonPressed();
+            }
+        });
     }
 
     @Override
-    public void setConected(boolean connected)
+    public void setConnected(boolean connected)
     {
         _setupButton.setEnabled(connected);
         _monitoringButton.setEnabled(connected);

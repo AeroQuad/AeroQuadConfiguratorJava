@@ -4,10 +4,7 @@ import gnu.io.*;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -22,6 +19,7 @@ public class SerialCommunicator implements ISerialCommunicator
     private SerialPort _connectedPort = null;
 
     private InputStream _imputStreamReader = null;
+    private OutputStream _outputStream = null;
     private boolean _isConnected = false;
     private BufferedReader _bufferedReader = null;
 
@@ -84,6 +82,7 @@ public class SerialCommunicator implements ISerialCommunicator
             try
             {
                 _imputStreamReader = _connectedPort.getInputStream();
+                _outputStream = _connectedPort.getOutputStream();
             }
             catch (IOException e)
             {
@@ -141,6 +140,7 @@ public class SerialCommunicator implements ISerialCommunicator
             System.out.println("Port: " + _connectedPortName + " opened");
             _isConnected = true;
             _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, new Boolean(_isConnected));
+            sendMessage(VEHICLE_STATE_REQUEST_MESSAGE);
         }
     }
 
@@ -264,6 +264,20 @@ public class SerialCommunicator implements ISerialCommunicator
         }
         catch (IOException e)
         {
+        }
+    }
+
+    private void sendMessage(final String message)
+    {
+        try
+        {
+//            _outputStream.flush();
+            _outputStream.write(message.getBytes());
+            _outputStream.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
 

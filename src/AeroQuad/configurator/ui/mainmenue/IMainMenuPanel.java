@@ -6,5 +6,5 @@ public interface IMainMenuPanel
     final String MONITORING = "MONITORING";
     final String TUNING = "TUNING";
 
-    void setConected(boolean connected);
+    void setConnected(boolean connected);
 }

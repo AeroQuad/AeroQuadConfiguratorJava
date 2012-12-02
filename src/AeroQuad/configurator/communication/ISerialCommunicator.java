@@ -16,6 +16,8 @@ public interface ISerialCommunicator
     final int BOAD_RATE_115200 = 115200;
     final int DEFAULT_BOAD_RATE = BOAD_RATE_115200;
 
+    final String VEHICLE_STATE_REQUEST_MESSAGE = "#";
+
     static String CONNECTION_STATE_CHANGE = "CONNECTION_STATE_CHANGE";
 
 

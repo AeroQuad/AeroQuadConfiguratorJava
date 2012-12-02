@@ -1,6 +1,5 @@
 package AeroQuad.configurator.ui.mainpanel.monitoring.serialmonitoring;
 
-public interface ISerialMonitoringPanel
+public interface ISerialMonitoringPanelController
 {
-    final String SEND = "SEND";
 }
