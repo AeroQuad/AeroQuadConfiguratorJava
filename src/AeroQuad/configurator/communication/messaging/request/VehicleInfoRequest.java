@@ -1,7 +1,7 @@
 package AeroQuad.configurator.communication.messaging.request;
 
 import AeroQuad.configurator.communication.messaging.messageanalyzer.IMessageAnalyser;
-import AeroQuad.configurator.communication.messaging.messageanalyzer.VehicleInfoMessageAnayser;
+import AeroQuad.configurator.communication.messaging.messageanalyzer.VehicleInfoMessageAnalyser;
 import AeroQuad.configurator.model.IAeroQuadModel;
 
 public class VehicleInfoRequest implements IRequest
@@ -16,7 +16,7 @@ public class VehicleInfoRequest implements IRequest
     @Override
     public IMessageAnalyser getMessageAnalyser()
     {
-        return new VehicleInfoMessageAnayser(_aeroQuadModel);  //To change body of implemented methods use File | Settings | File Templates.
+        return new VehicleInfoMessageAnalyser(_aeroQuadModel);  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override

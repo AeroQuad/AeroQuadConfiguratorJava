@@ -2,7 +2,7 @@ package AeroQuad.configurator.communication.messaging.messageanalyzer;
 
 import AeroQuad.configurator.model.IAeroQuadModel;
 
-public class VehicleInfoMessageAnayser implements IMessageAnalyser
+public class VehicleInfoMessageAnalyser implements IMessageAnalyser
 {
     private final String GPS_KEY = "GPS";
     private final String RANGE_DETECTION_KEY = "Range Detection";
@@ -23,7 +23,7 @@ public class VehicleInfoMessageAnayser implements IMessageAnalyser
 
     private final IAeroQuadModel _aeroQuadModel;
 
-    public VehicleInfoMessageAnayser(final IAeroQuadModel aeroQuadModel)
+    public VehicleInfoMessageAnalyser(final IAeroQuadModel aeroQuadModel)
     {
         _aeroQuadModel = aeroQuadModel;
     }

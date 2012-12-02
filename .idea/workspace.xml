@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afae10c6-bd8d-46ee-955a-920ddfa63c7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/IRequest.java" />
-      <change type="DELETED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\communication\messaging\IRequest.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\communication\messaging\IMessageAnalyser.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/IMessageAnalyser.java" />
-      <change type="MOVED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\communication\messaging\VehicleInfoMessageAnayser.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnayser.java" />
-      <change type="MOVED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\communication\messaging\VehicleInfoRequest.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleInfoRequest.java" />
-      <change type="MOVED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\communication\messaging\VehicleStatusMessageAnalyser.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" />
-      <change type="MOVED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\communication\messaging\VehicleStatusRequest.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleStatusRequest.java" />
+      <change type="MOVED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\communication\messaging\messageanalyzer\VehicleInfoMessageAnayser.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnalyser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/ISerialCommunicator.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/ISerialCommunicator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/SerialCommunicator.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/SerialCommunicator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusController.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleInfoRequest.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleInfoRequest.java" />
     </list>
     <ignored path="AQ_PCRemoteController.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,25 +92,25 @@
       <file leaf-file-name="VehicleInfoRequest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleInfoRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+            <state line="6" column="13" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IMessageAnalyser.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IMessageAnalyser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/IMessageAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.089709766">
+            <state line="2" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleInfoMessageAnayser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnayser.java">
+      <file leaf-file-name="VehicleInfoMessageAnalyser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+            <state line="4" column="34" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17941953">
               <folding />
             </state>
           </provider>
@@ -147,8 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/IAeroquadController.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/IConfiguratorController.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/MonitoringPanel.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/IRequest.java" />
@@ -163,6 +153,8 @@
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/VehicleStatusRequest.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleStatusRequest.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnayser.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnalyser.java" />
       </list>
     </option>
   </component>
@@ -218,6 +210,23 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfigurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -552,24 +561,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="AQConfiguratorJava" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AQConfigurator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="communication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messaging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messageanalyzer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
       </pane>
       <pane id="Favorites" />
     </panes>
@@ -588,9 +610,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -757,7 +779,11 @@
       <created>1354489079721</created>
       <updated>1354489079721</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Little refactoring">
+      <created>1354489223969</created>
+      <updated>1354489223969</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -844,7 +870,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aeroquad craft model fist snapshot and message analyser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little refactoring" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -860,6 +886,7 @@
     <MESSAGE value="Add of many things, serial comm tested and working..." />
     <MESSAGE value="Completion of the serial monitor" />
     <MESSAGE value="Aeroquad craft model fist snapshot and message analyser" />
+    <MESSAGE value="Little refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -928,49 +955,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="50" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="50" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleStatusRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/IRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="17" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/request/VehicleInfoRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnayser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+        <state line="6" column="13" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/IMessageAnalyser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.089709766">
+        <state line="2" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17941953">
           <folding />
         </state>
       </provider>
