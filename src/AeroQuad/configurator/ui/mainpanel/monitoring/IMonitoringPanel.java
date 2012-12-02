@@ -5,5 +5,7 @@ public interface IMonitoringPanel
     final String SERIAL = "SERIAL";
     final String SENSORS = "SENSORS";
     final String MOTORS = "MOTORS";
-    final String REMOTE = "REMOTE";
+    final String VEHICLE = "VEHICLE";
+
+    void setConnectedState(boolean connected);
 }

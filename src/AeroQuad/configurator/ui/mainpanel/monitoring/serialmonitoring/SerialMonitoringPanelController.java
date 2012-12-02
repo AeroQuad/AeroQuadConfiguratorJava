@@ -45,4 +45,10 @@ public class SerialMonitoringPanelController implements ISerialMonitoringPanelCo
     {
         _panel = panel;
     }
+
+    @Override
+    public void setActivated(final boolean activated)
+    {
+
+    }
 }

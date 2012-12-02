@@ -1,6 +1,8 @@
 package AeroQuad.configurator.communication;
 
 
+import AeroQuad.configurator.communication.messaging.IRequest;
+
 import java.beans.PropertyChangeListener;
 import java.util.List;
 
@@ -33,6 +35,8 @@ public interface ISerialCommunicator
     void connect(String commPort);
 
     void disconnect();
+
+    void sendRequest(IRequest vehicleStatusRequest);
 
     void sendCommand(String command);
 }

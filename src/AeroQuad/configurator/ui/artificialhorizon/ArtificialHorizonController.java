@@ -15,16 +15,16 @@ public class ArtificialHorizonController implements IArtificialHorizonController
 //            @Override
 //            public void propertyChange(PropertyChangeEvent evt)
 //            {
-//                final SensorsDataMessage messageanalyser = (SensorsDataMessage)evt.getNewValue();
-//                processMessage(messageanalyser);
+//                final SensorsDataMessage messaging = (SensorsDataMessage)evt.getNewValue();
+//                processMessage(messaging);
 //            }
 //        });
     }
 
-//    private void processMessage(final SensorsDataMessage messageanalyser)
+//    private void processMessage(final SensorsDataMessage messaging)
 //    {
-//        ArtificialHorizon.rollValueFiltered = (int)messageanalyser.getRoll()*-1;
-//        ArtificialHorizon.pitchValueFiltered = (int)messageanalyser.getPitch();
+//        ArtificialHorizon.rollValueFiltered = (int)messaging.getRoll()*-1;
+//        ArtificialHorizon.pitchValueFiltered = (int)messaging.getPitch();
 //        _haPanel.repaint();
 //    }
 }

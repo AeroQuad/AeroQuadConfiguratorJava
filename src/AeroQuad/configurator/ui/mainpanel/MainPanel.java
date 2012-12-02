@@ -7,8 +7,6 @@ import java.awt.*;
 
 public class MainPanel extends JPanel implements IMainPanel
 {
-
-
     private final CardLayout _cardLayout = new CardLayout();
 
     public MainPanel(final IMainPanelController controller,
@@ -31,8 +29,6 @@ public class MainPanel extends JPanel implements IMainPanel
         add(setupPanel,SETUP_SCREEN_KEY);
         add(monitoringPanel,MONITORING_SCREEN_KEY);
         add(tuningPanel,TUNING_SCREEN_KEY);
-
-        _cardLayout.show(this,SPLASH_SCREEN_KEY);
     }
 
     @Override

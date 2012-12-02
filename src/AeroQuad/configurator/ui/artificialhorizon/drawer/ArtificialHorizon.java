@@ -100,7 +100,7 @@ public class ArtificialHorizon{
 
 				// Create the SerialPort object at first
 //				final SerialCommunicator serial = new SerialCommunicator(leftPanel, rightPanel, subPanel, centerPanel, upPanel);
-                final SerialCommunicator serial = new SerialCommunicator();
+                final SerialCommunicator serial = new SerialCommunicator(null);
 
 
 				/*************************

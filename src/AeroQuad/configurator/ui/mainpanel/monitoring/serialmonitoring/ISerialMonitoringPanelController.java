@@ -1,6 +1,8 @@
 package AeroQuad.configurator.ui.mainpanel.monitoring.serialmonitoring;
 
-public interface ISerialMonitoringPanelController
+import AeroQuad.configurator.ui.IConfiguratorController;
+
+public interface ISerialMonitoringPanelController extends IConfiguratorController
 {
     void sendSerialCommand(String command);
 

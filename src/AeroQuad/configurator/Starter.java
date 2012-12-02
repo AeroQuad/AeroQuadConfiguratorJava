@@ -21,7 +21,7 @@ public class Starter
         final IAeroQuadModel aeroQuadModel = new AeroQuadModel();
 
         final ISerialCommunicator communicator = new SerialCommunicator(aeroQuadModel);
-        final AQConfiguratorMainFrame mainFrame = new AQConfiguratorMainFrame(communicator);
+        final AQConfiguratorMainFrame mainFrame = new AQConfiguratorMainFrame(communicator,aeroQuadModel);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

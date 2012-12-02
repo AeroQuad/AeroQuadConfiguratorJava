@@ -1,4 +1,4 @@
-package AeroQuad.configurator.communication.messageanalyser;
+package AeroQuad.configurator.communication.messaging;
 
 public interface IMessageAnalyser
 {

@@ -19,6 +19,7 @@ public class ConnectionPanel extends JPanel implements IConnectionPanel
 
     private IConnectionPanelController _controller;
     private boolean _isConnected = false;
+    private Color _defaultBackgroundColor;
 
     public ConnectionPanel(final IConnectionPanelController controller)
     {
@@ -32,7 +33,7 @@ public class ConnectionPanel extends JPanel implements IConnectionPanel
         add(_comPortComboBox);
         add(_refreshButton);
 
-        initButtonAction();
+        initButtons();
     }
 
     private void initComboBox()
@@ -73,8 +74,11 @@ public class ConnectionPanel extends JPanel implements IConnectionPanel
         }
     }
 
-    private void initButtonAction()
+    private void initButtons()
     {
+        _connectionButton.setOpaque(true);
+        _defaultBackgroundColor = _connectionButton.getBackground();
+
         _connectionButton.addActionListener(new ActionListener()
         {
             @Override
@@ -117,5 +121,6 @@ public class ConnectionPanel extends JPanel implements IConnectionPanel
     {
         _isConnected = isConnected;
         updateWidgetsState();
+        _connectionButton.setBackground(isConnected ? Color.GREEN : _defaultBackgroundColor);
     }
 }

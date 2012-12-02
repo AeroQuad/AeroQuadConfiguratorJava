@@ -1,7 +1,8 @@
 package AeroQuad.configurator.communication;
 
-import AeroQuad.configurator.communication.messageanalyser.IMessageAnalyser;
-import AeroQuad.configurator.communication.messageanalyser.VehicleMessageAnayser;
+import AeroQuad.configurator.communication.messaging.IMessageAnalyser;
+import AeroQuad.configurator.communication.messaging.IRequest;
+import AeroQuad.configurator.communication.messaging.VehicleInfoRequest;
 import AeroQuad.configurator.model.IAeroQuadModel;
 import gnu.io.CommPortIdentifier;
 import gnu.io.PortInUseException;
@@ -10,6 +11,7 @@ import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener;
 import gnu.io.UnsupportedCommOperationException;
 
+import javax.swing.SwingUtilities;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.BufferedReader;
@@ -69,7 +71,7 @@ public class SerialCommunicator implements ISerialCommunicator
     @Override
     public void connect(final String commPort)
     {
-        connect(ISerialCommunicator.DEFAULT_BOAD_RATE,commPort);
+        connect(ISerialCommunicator.DEFAULT_BOAD_RATE, commPort);
     }
 
     @Override
@@ -159,9 +161,8 @@ public class SerialCommunicator implements ISerialCommunicator
 
             System.out.println("Port: " + _connectedPortName + " opened");
             _isConnected = true;
-            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, _isConnected);
-            _messageAnalyser = new VehicleMessageAnayser(_aeroQuadModel);
-            sendMessage(VEHICLE_STATE_REQUEST_MESSAGE);
+            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE, null, _isConnected);
+            sendRequest(new VehicleInfoRequest(_aeroQuadModel));
         }
     }
 
@@ -199,15 +200,33 @@ public class SerialCommunicator implements ISerialCommunicator
 
             System.out.println("Serial Port closed!!");
             _isConnected = false;
-            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, _isConnected);
+            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE, null, _isConnected);
         }
+    }
+
+
+    @Override
+    public void sendRequest(final IRequest request)
+    {
+        _messageAnalyser = request.getMessageAnalyser();
+        sendCommand(request.getStringMessage());
     }
 
     @Override
     public void sendCommand(final String command)
     {
-        sendMessage(command);
+        try
+        {
+            _outputStream.write(command.getBytes());
+            _outputStream.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
+
+
 
 
     public void processSerialEvent(SerialPortEvent event)
@@ -227,7 +246,14 @@ public class SerialCommunicator implements ISerialCommunicator
                 break;
 
             case SerialPortEvent.DATA_AVAILABLE:
-                analyzeIncomingData();
+                SwingUtilities.invokeLater(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        analyzeIncomingData();
+                    }
+                });
                 break;
 
             default:
@@ -254,21 +280,7 @@ public class SerialCommunicator implements ISerialCommunicator
 
     private void handleReceivedString(final String rawData)
     {
-        _propertyChangeSupport.firePropertyChange(RAW_DATA_MESSAGE,null,rawData);
+        _propertyChangeSupport.firePropertyChange(RAW_DATA_MESSAGE, null, rawData);
         _messageAnalyser.analyzeRawData(rawData);
     }
-
-    private void sendMessage(final String message)
-    {
-        try
-        {
-            _outputStream.write(message.getBytes());
-            _outputStream.close();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
 }

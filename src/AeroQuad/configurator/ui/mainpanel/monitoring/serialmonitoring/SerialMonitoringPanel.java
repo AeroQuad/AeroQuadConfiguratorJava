@@ -1,13 +1,19 @@
 package AeroQuad.configurator.ui.mainpanel.monitoring.serialmonitoring;
 
+import AeroQuad.configurator.ui.ConfiguratorPanel;
+import AeroQuad.configurator.ui.IConfiguratorController;
+
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.TextArea;
 import java.awt.TextField;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
-public class SerialMonitoringPanel extends JPanel implements ISerialMonitoringPanel
+public class SerialMonitoringPanel extends ConfiguratorPanel implements ISerialMonitoringPanel
 {
     final TextArea _displayArea = new TextArea();
     final TextField _commandField = new TextField();
@@ -82,5 +88,18 @@ public class SerialMonitoringPanel extends JPanel implements ISerialMonitoringPa
         {
             _displayArea.setText("");
         }
+    }
+
+    @Override
+    public void setVisible(boolean visible)
+    {
+        super.setVisible(visible);
+
+    }
+
+    @Override
+    public IConfiguratorController getController()
+    {
+        return _controller;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }
