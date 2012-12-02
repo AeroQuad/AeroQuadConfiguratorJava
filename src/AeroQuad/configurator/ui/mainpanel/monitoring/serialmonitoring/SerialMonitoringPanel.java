@@ -74,4 +74,13 @@ public class SerialMonitoringPanel extends JPanel implements ISerialMonitoringPa
         buffer.append(_displayArea.getText());
         _displayArea.setText(buffer.toString());
     }
+
+    @Override
+    public void connectionStateChanged(final boolean isConnected)
+    {
+        if (!isConnected)
+        {
+            _displayArea.setText("");
+        }
+    }
 }

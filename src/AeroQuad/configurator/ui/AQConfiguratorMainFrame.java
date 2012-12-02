@@ -16,8 +16,9 @@ import AeroQuad.configurator.ui.mainpanel.setup.SetupPanelController;
 import AeroQuad.configurator.ui.mainpanel.tuning.TuningPanel;
 import AeroQuad.configurator.ui.mainpanel.tuning.TuningPanelController;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
 
 public class AQConfiguratorMainFrame extends JFrame
 {

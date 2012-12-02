@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AQConfigurator.iml" filepath="$PROJECT_DIR$/AQConfigurator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AQ_PCRemoteController.iml" filepath="$PROJECT_DIR$/AQ_PCRemoteController.iml" />
     </modules>
   </component>
 </project>

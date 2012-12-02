@@ -30,8 +30,8 @@ public class ConnectionPanelController implements IConnectionPanelController
 //            @Override
 //            public void propertyChange(final PropertyChangeEvent event)
 //            {
-//                final FlightDataMessage message = (FlightDataMessage)event.getNewValue();
-//                _panel.setLoopTime(message.getLoopTime());
+//                final FlightDataMessage messageanalyser = (FlightDataMessage)event.getNewValue();
+//                _panel.setLoopTime(messageanalyser.getLoopTime());
 //            }
 //        });
     }

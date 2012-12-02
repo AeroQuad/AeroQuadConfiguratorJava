@@ -5,4 +5,6 @@ public interface ISerialMonitoringPanel
     final String SEND = "SEND";
 
     void displayRawData(String rawData);
+
+    void connectionStateChanged(boolean isConnected);
 }

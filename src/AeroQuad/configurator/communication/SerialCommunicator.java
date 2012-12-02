@@ -1,10 +1,22 @@
 package AeroQuad.configurator.communication;
 
-import gnu.io.*;
+import AeroQuad.configurator.communication.messageanalyser.IMessageAnalyser;
+import AeroQuad.configurator.communication.messageanalyser.VehicleMessageAnayser;
+import AeroQuad.configurator.model.IAeroQuadModel;
+import gnu.io.CommPortIdentifier;
+import gnu.io.PortInUseException;
+import gnu.io.SerialPort;
+import gnu.io.SerialPortEvent;
+import gnu.io.SerialPortEventListener;
+import gnu.io.UnsupportedCommOperationException;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -23,7 +35,15 @@ public class SerialCommunicator implements ISerialCommunicator
     private boolean _isConnected = false;
     private BufferedReader _bufferedReader = null;
 
+    private final IAeroQuadModel _aeroQuadModel;
+    private IMessageAnalyser _messageAnalyser;
+
     private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(this);
+
+    public SerialCommunicator(final IAeroQuadModel aeroQuadModel)
+    {
+        _aeroQuadModel = aeroQuadModel;
+    }
 
     @Override
     public void addListener(final String propertyName, final PropertyChangeListener listener)
@@ -140,6 +160,7 @@ public class SerialCommunicator implements ISerialCommunicator
             System.out.println("Port: " + _connectedPortName + " opened");
             _isConnected = true;
             _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE,null, _isConnected);
+            _messageAnalyser = new VehicleMessageAnayser(_aeroQuadModel);
             sendMessage(VEHICLE_STATE_REQUEST_MESSAGE);
         }
     }
@@ -234,6 +255,7 @@ public class SerialCommunicator implements ISerialCommunicator
     private void handleReceivedString(final String rawData)
     {
         _propertyChangeSupport.firePropertyChange(RAW_DATA_MESSAGE,null,rawData);
+        _messageAnalyser.analyzeRawData(rawData);
     }
 
     private void sendMessage(final String message)
