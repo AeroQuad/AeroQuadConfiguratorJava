@@ -1,5 +1,7 @@
-package AeroQuad.configurator.communication.messaging;
+package AeroQuad.configurator.communication.messaging.request;
 
+import AeroQuad.configurator.communication.messaging.messageanalyzer.IMessageAnalyser;
+import AeroQuad.configurator.communication.messaging.messageanalyzer.VehicleInfoMessageAnayser;
 import AeroQuad.configurator.model.IAeroQuadModel;
 
 public class VehicleInfoRequest implements IRequest

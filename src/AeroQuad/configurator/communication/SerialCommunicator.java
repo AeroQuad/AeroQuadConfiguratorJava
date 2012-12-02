@@ -1,8 +1,8 @@
 package AeroQuad.configurator.communication;
 
-import AeroQuad.configurator.communication.messaging.IMessageAnalyser;
-import AeroQuad.configurator.communication.messaging.IRequest;
-import AeroQuad.configurator.communication.messaging.VehicleInfoRequest;
+import AeroQuad.configurator.communication.messaging.messageanalyzer.IMessageAnalyser;
+import AeroQuad.configurator.communication.messaging.request.IRequest;
+import AeroQuad.configurator.communication.messaging.request.VehicleInfoRequest;
 import AeroQuad.configurator.model.IAeroQuadModel;
 import gnu.io.CommPortIdentifier;
 import gnu.io.PortInUseException;

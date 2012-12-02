@@ -1,7 +1,7 @@
 package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus;
 
 import AeroQuad.configurator.communication.ISerialCommunicator;
-import AeroQuad.configurator.communication.messaging.VehicleStatusRequest;
+import AeroQuad.configurator.communication.messaging.request.VehicleStatusRequest;
 import AeroQuad.configurator.model.IAeroQuadModel;
 
 public class VehicleStatusController implements IVehicleStatusController

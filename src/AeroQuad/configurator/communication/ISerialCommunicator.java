@@ -1,7 +1,7 @@
 package AeroQuad.configurator.communication;
 
 
-import AeroQuad.configurator.communication.messaging.IRequest;
+import AeroQuad.configurator.communication.messaging.request.IRequest;
 
 import java.beans.PropertyChangeListener;
 import java.util.List;
