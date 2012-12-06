@@ -32,6 +32,7 @@ public class AQConfiguratorMainFrame extends JFrame
     public AQConfiguratorMainFrame(final ISerialCommunicator communicator,
                                    final IAeroQuadModel aeroQuadModel)
     {
+        super("AeroQuad Configurator v4.0");
         initUi(communicator,aeroQuadModel);
     }
 
@@ -70,12 +71,6 @@ public class AQConfiguratorMainFrame extends JFrame
             final ConnectionPanel connectionPanel = new ConnectionPanel(new ConnectionPanelController(communicator));
             mainContainer.add(connectionPanel, BorderLayout.SOUTH);
         }
-
-
-//        final ArtificialHorizonPanel artificialHorizonPanel = new ArtificialHorizonPanel();
-//        new ArtificialHorizonController(artificialHorizonPanel, communicator);
-//        mainPanel.add(artificialHorizonPanel, BorderLayout.WEST);
-
 
         getContentPane().add(mainContainer);
         pack();

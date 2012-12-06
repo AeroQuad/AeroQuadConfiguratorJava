@@ -1,5 +1,7 @@
 package AeroQuad.configurator.model;
 
+import java.beans.PropertyChangeListener;
+
 public interface IAeroQuadModel
 {
     final String GPS_PROPERTY_KEY = "GPS_PROPERTY_KEY";
@@ -15,7 +17,10 @@ public interface IAeroQuadModel
     final String FLIGHT_CONFIG_PROPERTY_KEY = "FLIGHT_CONFIG_PROPERTY_KEY";
     final String BOARD_TYPE_PROPERTY_KEY = "BOARD_TYPE_PROPERTY_KEY";
     final String FLIGHT_SOFTWARE_VERSION_PROPERTY_KEY = "FLIGHT_SOFTWARE_VERSION_PROPERTY_KEY";
+    final String MOTOR_ARMED_STATE_CHANGED = "MOTOR_ARMED_STATE_CHANGED";
+    final String VEHICLE_ATTITUDE_STATE_CHANGE = "VEHICLE_ATTITUDE_STATE_CHANGE";
 
+    void addListener(String propertyName, PropertyChangeListener propertyChangeListener);
 
     void setHaveGPS(boolean gpsEnabled);
     void setHaveRangeFinder(boolean rangerEnabled);
@@ -30,4 +35,7 @@ public interface IAeroQuadModel
     void setFlightConfig(String data);
     void setBoardType(String data);
     void setFlightSoftwareVersion(String data);
+
+    void setMotorArmed(boolean armed);
+    void setVehicleAttitude(VehicleAttitude vehicleAttitude);
 }
