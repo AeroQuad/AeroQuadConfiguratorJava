@@ -1,9 +1,12 @@
 package AeroQuad.configurator.model;
 
+import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 public class AeroQuadModel implements IAeroQuadModel
 {
+    private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(this);
+
     private boolean _haveGPS = false;
     private boolean _haveRangeFinder = false;
     private boolean _cameraStabilityEnabled = false;
@@ -18,8 +21,14 @@ public class AeroQuadModel implements IAeroQuadModel
     private String _boardType = "";
     private String _flightSoftwareVersion = "";
 
+    private boolean _motorArmed = false;
+    private VehicleAttitude _vehicleAttitude = new VehicleAttitude(0,0,0);
 
-    private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(this);
+    @Override
+    public void addListener(final String propertyName, final PropertyChangeListener listener)
+    {
+        _propertyChangeSupport.addPropertyChangeListener(propertyName,listener);
+    }
 
     @Override
     public void setHaveGPS(final boolean haveGPS)
@@ -111,4 +120,19 @@ public class AeroQuadModel implements IAeroQuadModel
         _flightSoftwareVersion = flightSoftwareVersion;
         _propertyChangeSupport.firePropertyChange(FLIGHT_SOFTWARE_VERSION_PROPERTY_KEY,null,_flightSoftwareVersion);
     }
+
+    @Override
+    public void setMotorArmed(final boolean armed)
+    {
+        _motorArmed = armed;
+        _propertyChangeSupport.firePropertyChange(MOTOR_ARMED_STATE_CHANGED,null,_motorArmed);
+    }
+
+    @Override
+    public void setVehicleAttitude(final VehicleAttitude vehicleAttitude)
+    {
+        _vehicleAttitude = vehicleAttitude;
+        _propertyChangeSupport.firePropertyChange(VEHICLE_ATTITUDE_STATE_CHANGE,null,_vehicleAttitude.clone());
+    }
+
 }

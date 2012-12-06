@@ -159,6 +159,14 @@ public class SerialCommunicator implements ISerialCommunicator
             // Advise if data available to be read on the port
             _connectedPort.notifyOnDataAvailable(true);
 
+            try
+            {
+                Thread.sleep(1000);
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
             System.out.println("Port: " + _connectedPortName + " opened");
             _isConnected = true;
             _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE, null, _isConnected);
@@ -171,7 +179,6 @@ public class SerialCommunicator implements ISerialCommunicator
     {
         if (_isConnected)
         {
-
             if (_imputStreamReader != null)
             {
                 try
@@ -280,6 +287,7 @@ public class SerialCommunicator implements ISerialCommunicator
 
     private void handleReceivedString(final String rawData)
     {
+        System.out.println(rawData);
         _propertyChangeSupport.firePropertyChange(RAW_DATA_MESSAGE, null, rawData);
         _messageAnalyser.analyzeRawData(rawData);
     }
