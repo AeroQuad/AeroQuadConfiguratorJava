@@ -9,7 +9,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/a.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354751501484" ignored="false" />
     <file path="/fragment.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354751456238" ignored="false" />
-    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354757071100" ignored="false" />
+    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354757247061" ignored="false" />
     <file path="/SerialCommunicator.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354754227174" ignored="false" />
     <file path="/VehicleStatusMessageAnalyser.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354755700585" ignored="false" />
     <file path="/VehicleStatusPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354756787958" ignored="false" />
@@ -34,8 +34,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -70,6 +68,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -80,10 +80,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VehicleStatusPanel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VehicleStatusPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="432" selection-end="432" vertical-scroll-proportion="-0.08928572">
+            <state line="10" column="13" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VehicleAttitude.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="1" selection-start="745" selection-end="745" vertical-scroll-proportion="0.75308645">
               <folding />
             </state>
           </provider>
@@ -115,7 +124,6 @@
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/SerialCommunicator.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/artificialhorizon/ArtificialHorizonController.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/model/AeroQuadModel.java" />
@@ -123,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusController.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/IVehicleStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java" />
       </list>
     </option>
   </component>
@@ -178,6 +187,30 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfigurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -462,30 +495,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AQConfiguratorJava" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AQConfigurator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Favorites" />
     </panes>
   </component>
@@ -503,9 +512,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -665,7 +674,11 @@
       <created>1354757093740</created>
       <updated>1354757093740</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Attitude indicator in vehicle status implemented!">
+      <created>1354757135991</created>
+      <updated>1354757135991</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -692,7 +705,7 @@
     <frame x="433" y="3" width="1172" height="858" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38516405" sideWeight="0.4968383" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38516405" sideWeight="0.4968383" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -793,6 +806,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleInfoMessageAnalyser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="34" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
@@ -824,13 +844,6 @@
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="0" selection-start="4010" selection-end="4010" vertical-scroll-proportion="0.7175227">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="433" selection-end="433" vertical-scroll-proportion="0.5093633">
           <folding />
         </state>
       </provider>
@@ -893,7 +906,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="432" selection-end="432" vertical-scroll-proportion="-0.08928572">
+        <state line="10" column="13" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="1" selection-start="745" selection-end="745" vertical-scroll-proportion="0.75308645">
           <folding />
         </state>
       </provider>
