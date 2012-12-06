@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afae10c6-bd8d-46ee-955a-920ddfa63c7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java" />
-      <change type="DELETED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\ui\artificialhorizon\ArtificialHorizonController.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\ui\artificialhorizon\IArtificialHorizonController.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/model/AeroQuadModel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/model/AeroQuadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/IVehicleStatusController.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/IVehicleStatusController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/IVehicleStatusPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/IVehicleStatusPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Kenny.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Kenny.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/SerialCommunicator.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/SerialCommunicator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusController.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/model/VehicleAttitude.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AQ_PCRemoteController.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354751501484" ignored="false" />
     <file path="/fragment.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354751456238" ignored="false" />
-    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354752187310" ignored="false" />
+    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354757071100" ignored="false" />
     <file path="/SerialCommunicator.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354754227174" ignored="false" />
     <file path="/VehicleStatusMessageAnalyser.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354755700585" ignored="false" />
     <file path="/VehicleStatusPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354756787958" ignored="false" />
@@ -675,7 +661,11 @@
       <created>1354489329989</created>
       <updated>1354489329990</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Attitude indicator in vehicle status implemented!">
+      <created>1354757093740</created>
+      <updated>1354757093740</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -763,7 +753,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="typo fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attitude indicator in vehicle status implemented!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -781,6 +771,7 @@
     <MESSAGE value="Aeroquad craft model fist snapshot and message analyser" />
     <MESSAGE value="Little refactoring" />
     <MESSAGE value="typo fix" />
+    <MESSAGE value="Attitude indicator in vehicle status implemented!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
