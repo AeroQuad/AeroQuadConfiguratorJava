@@ -30,13 +30,14 @@ import java.io.InputStream;
 @SuppressWarnings("serial")
 public class ArtificialHorizonPanel extends JPanel
 {
+    private final int PREFERED_PANEL_SIZE = 500;
+
     private final Color _blueSky = new Color(10, 112, 156);
     private final Color _orangeEarth = new Color(222, 132, 14);
-    private final Arc2D _upperArc = new Arc2D.Float();
-    private final Arc2D _lowerArc = new Arc2D.Float();
-    private Point2D _centerPoint = new Point2D.Float(250, 250);
 
-    private int _radius = 200;
+    private Point2D _centerPoint = new Point2D.Float(PREFERED_PANEL_SIZE /2, PREFERED_PANEL_SIZE /2);
+    private int _radius = PREFERED_PANEL_SIZE /2-((PREFERED_PANEL_SIZE /2)/10);
+
     private Font _font = null;
 
     private int _rollAngle;
@@ -55,18 +56,18 @@ public class ArtificialHorizonPanel extends JPanel
         }
         catch (Exception e)
         {
-            System.out.println("Format fonts not correct!!!");
+            System.err.println("Format fonts not correct!!!");
         }
     }
 
     @Override
     public Dimension getPreferredSize()
     {
-        return new Dimension(500, 500);
+        return new Dimension(PREFERED_PANEL_SIZE, PREFERED_PANEL_SIZE);
     }
 
     @Override
-    public void paintComponent(Graphics g)
+    public void paintComponent(final Graphics g)
     {
         super.paintComponent(g);
         final Graphics2D g2d = (Graphics2D) g;
@@ -82,8 +83,12 @@ public class ArtificialHorizonPanel extends JPanel
         drawBankRollMarker(g2d);
 
         // Display the outline of the Horizon
-        final Ellipse2D roundHorizon = new Ellipse2D.Float(50, 50, 2 * _radius, 2 * _radius);
-        final GradientPaint outline = new GradientPaint(20, 20, Color.white, 500, 500, Color.gray, true);
+        final int alignment = (int) (PREFERED_PANEL_SIZE/2/10);
+        System.out.println(alignment);
+        final Ellipse2D roundHorizon = new Ellipse2D.Float(alignment, alignment, 2 * _radius, 2 * _radius);
+
+//        final Ellipse2D roundHorizon = new Ellipse2D.Float(50, 50, 2 * _radius, 2 * _radius);
+        final GradientPaint outline = new GradientPaint(20, 20, Color.white, PREFERED_PANEL_SIZE, PREFERED_PANEL_SIZE, Color.gray, true);
         g2d.setPaint(outline);
         g2d.setStroke(new BasicStroke(6));
         g2d.draw(roundHorizon);
@@ -124,11 +129,12 @@ public class ArtificialHorizonPanel extends JPanel
             angExtUpper = (180 - (2 * angStartUpper));
         }
 
-        // Draw the artificial horizon itself, composed by 2 half arcs
+        final Arc2D _lowerArc = new Arc2D.Float();
         _lowerArc.setArcByCenter(_centerPoint.getX(), _centerPoint.getY(), _radius, 0, 360, Arc2D.CHORD);
         g2d.setPaint(_orangeEarth);
         g2d.fill(_lowerArc);
 
+        final Arc2D _upperArc = new Arc2D.Float();
         _upperArc.setArcByCenter(_centerPoint.getX(), _centerPoint.getY(), _radius, angStartUpper, angExtUpper, Arc2D.CHORD);
         g2d.setPaint(_blueSky);
         g2d.fill(_upperArc);
@@ -170,7 +176,6 @@ public class ArtificialHorizonPanel extends JPanel
 
         for (int i = limitInf; i < limitMax; i++)
         {
-
             int angle = i * 10;    // Display the text at the right "height"
             int angleCorrUp = angle - _pitchAngle;
             int distance = Math.abs(i * 5);       // Put the text and the lines length at the right position
