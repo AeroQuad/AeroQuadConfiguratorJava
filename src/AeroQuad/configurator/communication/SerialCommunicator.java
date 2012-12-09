@@ -287,7 +287,7 @@ public class SerialCommunicator implements ISerialCommunicator
 
     private void handleReceivedString(final String rawData)
     {
-        System.out.println(rawData);
+//        System.out.println(rawData);
         _propertyChangeSupport.firePropertyChange(RAW_DATA_MESSAGE, null, rawData);
         _messageAnalyser.analyzeRawData(rawData);
     }
