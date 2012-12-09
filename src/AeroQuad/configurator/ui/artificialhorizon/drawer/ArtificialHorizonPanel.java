@@ -27,21 +27,22 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.io.InputStream;
 
-@SuppressWarnings("serial")
 public class ArtificialHorizonPanel extends JPanel
 {
-    private final int PREFERED_PANEL_SIZE = 500;
+    private int PREFERRED_PANEL_SIZE = 350;
 
     private final Color _blueSky = new Color(10, 112, 156);
     private final Color _orangeEarth = new Color(222, 132, 14);
 
-    private Point2D _centerPoint = new Point2D.Float(PREFERED_PANEL_SIZE /2, PREFERED_PANEL_SIZE /2);
-    private int _radius = PREFERED_PANEL_SIZE /2-((PREFERED_PANEL_SIZE /2)/10);
+    private Point2D _centerPoint = new Point2D.Float(PREFERRED_PANEL_SIZE /2, PREFERRED_PANEL_SIZE /2);
+    private int _radius = PREFERRED_PANEL_SIZE /2-((PREFERRED_PANEL_SIZE /2)/10);
 
     private Font _font = null;
 
-    private int _rollAngle;
-    private int _pitchAngle;
+    private int _rollAngle = 0;
+    private int _pitchAngle = 0;
+    private int _headingAngle = 0;
+    private AffineTransform _originalTransform;
 
 
     public ArtificialHorizonPanel()
@@ -58,19 +59,23 @@ public class ArtificialHorizonPanel extends JPanel
         {
             System.err.println("Format fonts not correct!!!");
         }
+
+        setMinimumSize(new Dimension(200,200));
     }
 
     @Override
     public Dimension getPreferredSize()
     {
-        return new Dimension(PREFERED_PANEL_SIZE, PREFERED_PANEL_SIZE);
+        return new Dimension(PREFERRED_PANEL_SIZE, PREFERRED_PANEL_SIZE);
     }
 
     @Override
-    public void paintComponent(final Graphics g)
+    public void paint(final Graphics g)
     {
-        super.paintComponent(g);
+        super.paint(g);    //To change body of overridden methods use File | Settings | File Templates.
+
         final Graphics2D g2d = (Graphics2D) g;
+        _originalTransform = g2d.getTransform();
 
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
@@ -82,17 +87,21 @@ public class ArtificialHorizonPanel extends JPanel
         // Draw the Bank roll lines on the top
         drawBankRollMarker(g2d);
 
-        // Display the outline of the Horizon
-        final int alignment = (int) (PREFERED_PANEL_SIZE/2/10);
-        System.out.println(alignment);
-        final Ellipse2D roundHorizon = new Ellipse2D.Float(alignment, alignment, 2 * _radius, 2 * _radius);
+        drawBankRollTriangle(g2d);
 
-//        final Ellipse2D roundHorizon = new Ellipse2D.Float(50, 50, 2 * _radius, 2 * _radius);
-        final GradientPaint outline = new GradientPaint(20, 20, Color.white, PREFERED_PANEL_SIZE, PREFERED_PANEL_SIZE, Color.gray, true);
+        g2d.transform(_originalTransform);
+
+        // Display the outline of the Horizon
+        final int topLeftAlgnment = (PREFERRED_PANEL_SIZE /2/10);
+        final Ellipse2D roundHorizon = new Ellipse2D.Float(topLeftAlgnment, topLeftAlgnment, 2 * _radius, 2 * _radius);
+        final GradientPaint outline = new GradientPaint(20, 20, Color.white, PREFERRED_PANEL_SIZE, PREFERRED_PANEL_SIZE, Color.gray, true);
         g2d.setPaint(outline);
         g2d.setStroke(new BasicStroke(6));
         g2d.draw(roundHorizon);
+
+        drawStringData(g2d);
     }
+
 
 
     private void drawHorizon(Graphics2D g2d)
@@ -102,8 +111,7 @@ public class ArtificialHorizonPanel extends JPanel
         int angExtUpper = 0;
 
         // First step is to determine the roll display position
-        AffineTransform affineTransform = AffineTransform.getRotateInstance(Math.toRadians(_rollAngle), _centerPoint.getX(), _centerPoint.getY());
-        g2d.transform(affineTransform);
+        g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(_rollAngle), _centerPoint.getX(), _centerPoint.getY()));
 
         if ((_pitchAngle < 90) && (_pitchAngle > -90))
         {
@@ -113,8 +121,7 @@ public class ArtificialHorizonPanel extends JPanel
 
         if ((_pitchAngle >= 90) && (_pitchAngle < 180))
         {
-            affineTransform = AffineTransform.getRotateInstance(Math.toRadians(180), _centerPoint.getX(), _centerPoint.getY());
-            g2d.transform(affineTransform);
+            g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(180), _centerPoint.getX(), _centerPoint.getY()));
 
             angStartUpper = -(180 - _pitchAngle);  // Minus because of the reverse way of working of the artificial horizon positive values let the blue arc to get bigger...
             angExtUpper = (180 - (2 * angStartUpper));
@@ -122,46 +129,33 @@ public class ArtificialHorizonPanel extends JPanel
 
         if ((_pitchAngle <= -90) && (_pitchAngle > -180))
         {
-            affineTransform = AffineTransform.getRotateInstance(Math.toRadians(180), _centerPoint.getX(), _centerPoint.getY());
-            g2d.transform(affineTransform);
+            g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(180), _centerPoint.getX(), _centerPoint.getY()));
 
             angStartUpper = (180 + _pitchAngle);  // Minus because of the reverse way of working of the artificial horizon positive values let the blue arc to get bigger...
             angExtUpper = (180 - (2 * angStartUpper));
         }
 
-        final Arc2D _lowerArc = new Arc2D.Float();
-        _lowerArc.setArcByCenter(_centerPoint.getX(), _centerPoint.getY(), _radius, 0, 360, Arc2D.CHORD);
+        final Arc2D lowerArc = new Arc2D.Float();
+        lowerArc.setArcByCenter(_centerPoint.getX(), _centerPoint.getY(), _radius, 0, 360, Arc2D.CHORD);
         g2d.setPaint(_orangeEarth);
-        g2d.fill(_lowerArc);
+        g2d.fill(lowerArc);
 
-        final Arc2D _upperArc = new Arc2D.Float();
-        _upperArc.setArcByCenter(_centerPoint.getX(), _centerPoint.getY(), _radius, angStartUpper, angExtUpper, Arc2D.CHORD);
+        final Arc2D upperArc = new Arc2D.Float();
+        upperArc.setArcByCenter(_centerPoint.getX(), _centerPoint.getY(), _radius, angStartUpper, angExtUpper, Arc2D.CHORD);
         g2d.setPaint(_blueSky);
-        g2d.fill(_upperArc);
+        g2d.fill(upperArc);
 
         // Draw the middle white line
         g2d.setStroke(new BasicStroke(1));
         g2d.setPaint(Color.white);
-        g2d.draw(_upperArc);
+        g2d.draw(upperArc);
 
-        drawMarkers(g2d);
+        drawHorizonLines(g2d);
 
-        affineTransform = AffineTransform.getRotateInstance(Math.toRadians(-_rollAngle), _centerPoint.getX(), _centerPoint.getY());
-
-        g2d.transform(affineTransform);
+        g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(-_rollAngle), _centerPoint.getX(), _centerPoint.getY()));
     }
 
-
-    private void drawMarkers(final Graphics2D g2d)
-    {
-        // Draw the lines on the Horizon
-        drawLines(g2d);
-        // Draw the Bank roll display on the top
-        drawBankRollTriangle(g2d);
-
-    }
-
-    private void drawLines(final Graphics2D g2d)
+    private void drawHorizonLines(final Graphics2D g2d)
     {
         int limitInf = ((_pitchAngle / 10) - 5);
         if (limitInf < -18)
@@ -220,8 +214,12 @@ public class ArtificialHorizonPanel extends JPanel
     }
 
 
-    private void drawBankRollTriangle(Graphics2D g2d)
+    private void drawBankRollTriangle(final Graphics2D g2d)
     {
+        g2d.transform(_originalTransform);
+        g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(60+_headingAngle),_centerPoint.getX(), _centerPoint.getY()));
+        g2d.setStroke(new BasicStroke(3));
+
         final GeneralPath triangle = new GeneralPath(GeneralPath.WIND_EVEN_ODD);
         triangle.moveTo(_centerPoint.getX(), (_centerPoint.getY() - _radius + 5));
         triangle.lineTo((_centerPoint.getX() - 15), (_centerPoint.getY() - _radius + 30));
@@ -249,37 +247,44 @@ public class ArtificialHorizonPanel extends JPanel
 
         for (int i = 0; i < 5; i++)
         {
-            AffineTransform ata = AffineTransform.getRotateInstance(Math.toRadians(30), _centerPoint.getX(), _centerPoint.getY());
-            g2d.transform(ata);
+            g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(30), _centerPoint.getX(), _centerPoint.getY()));
             g2d.draw(bankMarkerLong);
         }
 
-        AffineTransform ata = AffineTransform.getRotateInstance(Math.toRadians(260), _centerPoint.getX(), _centerPoint.getY());
-        g2d.transform(ata);
+        g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(260), _centerPoint.getX(), _centerPoint.getY()));
 
         for (int i = 0; i < 7; i++)
         {
-            AffineTransform atb = AffineTransform.getRotateInstance(Math.toRadians(10), _centerPoint.getX(), _centerPoint.getY());
-            g2d.transform(atb);
+            g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(10), _centerPoint.getX(), _centerPoint.getY()));
             g2d.draw(bankMarkerShort);
         }
 
-
-        ata = AffineTransform.getRotateInstance(Math.toRadians(110), _centerPoint.getX(), _centerPoint.getY());
-        g2d.transform(ata);
+        g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(110), _centerPoint.getX(), _centerPoint.getY()));
 
         for (int i = 0; i < 7; i++)
         {
-            AffineTransform atb = AffineTransform.getRotateInstance(Math.toRadians(10), _centerPoint.getX(), _centerPoint.getY());
-            g2d.transform(atb);
+            g2d.transform(AffineTransform.getRotateInstance(Math.toRadians(10), _centerPoint.getX(), _centerPoint.getY()));
             g2d.draw(bankMarkerShort);
         }
+    }
+
+    private void drawStringData(final Graphics2D g2d)
+    {
+        g2d.setTransform(_originalTransform);
+        g2d.setColor(Color.WHITE);
+        final String rollString = "R:" + Integer.toString(_rollAngle);
+        g2d.drawString(rollString,3, (float) PREFERRED_PANEL_SIZE-65);
+        final String pitchString = "P:" + Integer.toString(_pitchAngle);
+        g2d.drawString(pitchString,3, (float) PREFERRED_PANEL_SIZE-50);
+        final String headingString = "H:" + Integer.toString(_headingAngle);
+        g2d.drawString(headingString,3, (float) PREFERRED_PANEL_SIZE-35);
     }
 
     public void setVehicleAttitude(final VehicleAttitude vehicleAttitude)
     {
         _rollAngle = (int)Math.toDegrees(vehicleAttitude.getXAxisAngle());
         _pitchAngle = (int)Math.toDegrees(vehicleAttitude.getYAxisAngle());
+        _headingAngle = (int)Math.toDegrees(vehicleAttitude.getZAxisAngle());
         repaint();
     }
 }
