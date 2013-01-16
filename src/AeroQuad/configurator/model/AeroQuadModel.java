@@ -135,4 +135,40 @@ public class AeroQuadModel implements IAeroQuadModel
         _propertyChangeSupport.firePropertyChange(VEHICLE_ATTITUDE_STATE_CHANGE,null,_vehicleAttitude.clone());
     }
 
+    @Override
+    public void setCurrentAltitude(final float altitude)
+    {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void setAltitudeHoldState(final boolean altitudeHoldState)
+    {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void setReceiver(final Receiver receiver)
+    {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void setMotors(final Motors motors)
+    {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void setCurrentVoltage(final float currentVoltage)
+    {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void setFlightMode(final FlightMode flightMode)
+    {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
 }

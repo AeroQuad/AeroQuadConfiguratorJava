@@ -39,6 +39,7 @@ public class SerialCommunicator implements ISerialCommunicator
 
     private final IAeroQuadModel _aeroQuadModel;
     private IMessageAnalyser _messageAnalyser;
+    private IMessageAnalyser _vehicleStateAnalyser;
 
     private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(this);
 
@@ -162,15 +163,18 @@ public class SerialCommunicator implements ISerialCommunicator
             try
             {
                 Thread.sleep(1000);
+                System.out.println("Port: " + _connectedPortName + " opened");
+                _isConnected = true;
+                _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE, null, _isConnected);
+                sendCommand("x");
+                final VehicleInfoRequest request = new VehicleInfoRequest(_aeroQuadModel);
+                _vehicleStateAnalyser = request.getMessageAnalyser();
+                sendRequest(request);
             }
             catch (InterruptedException e)
             {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
-            System.out.println("Port: " + _connectedPortName + " opened");
-            _isConnected = true;
-            _propertyChangeSupport.firePropertyChange(CONNECTION_STATE_CHANGE, null, _isConnected);
-            sendRequest(new VehicleInfoRequest(_aeroQuadModel));
         }
     }
 
@@ -281,7 +285,7 @@ public class SerialCommunicator implements ISerialCommunicator
         }
         catch (IOException e)
         {
-            //System.err.println("Incomming data error" + e);
+            //System.err.println("Decoding message error = " + rawData);
         }
     }
 
@@ -289,6 +293,8 @@ public class SerialCommunicator implements ISerialCommunicator
     {
 //        System.out.println(rawData);
         _propertyChangeSupport.firePropertyChange(RAW_DATA_MESSAGE, null, rawData);
-        _messageAnalyser.analyzeRawData(rawData);
+        if (!_vehicleStateAnalyser.analyzeRawData(rawData)) {
+            _messageAnalyser.analyzeRawData(rawData);
+        }
     }
 }
