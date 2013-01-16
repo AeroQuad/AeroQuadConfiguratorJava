@@ -38,4 +38,15 @@ public interface IAeroQuadModel
 
     void setMotorArmed(boolean armed);
     void setVehicleAttitude(VehicleAttitude vehicleAttitude);
+
+    void setCurrentAltitude(float altitude);
+    void setAltitudeHoldState(boolean altitudeHoldState);
+
+    void setReceiver(Receiver receiver);
+
+    void setMotors(Motors motors);
+
+    void setCurrentVoltage(float currentVoltage);
+
+    void setFlightMode(FlightMode flightMode);
 }
