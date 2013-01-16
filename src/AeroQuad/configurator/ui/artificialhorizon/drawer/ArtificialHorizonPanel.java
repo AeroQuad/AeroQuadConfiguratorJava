@@ -63,6 +63,13 @@ public class ArtificialHorizonPanel extends JPanel
         setMinimumSize(new Dimension(200,200));
     }
 
+//    @Override
+//    public void setBounds(final int x, final int y, final int width, final int height)
+//    {
+//        PREFERRED_PANEL_SIZE = Math.max(width,getHeight());
+//        super.setBounds(x, y, width, height);    //To change body of overridden methods use File | Settings | File Templates.
+//    }
+
     @Override
     public Dimension getPreferredSize()
     {

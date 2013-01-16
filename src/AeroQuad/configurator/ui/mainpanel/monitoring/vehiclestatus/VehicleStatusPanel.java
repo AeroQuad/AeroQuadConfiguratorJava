@@ -4,6 +4,8 @@ import AeroQuad.configurator.model.VehicleAttitude;
 import AeroQuad.configurator.ui.ConfiguratorPanel;
 import AeroQuad.configurator.ui.IConfiguratorController;
 import AeroQuad.configurator.ui.artificialhorizon.drawer.ArtificialHorizonPanel;
+import AeroQuad.configurator.ui.mainpanel.receiverpanel.ReceiverPanel;
+import AeroQuad.configurator.ui.mainpanel.receiverpanel.ReceiverPanelController;
 
 import java.awt.BorderLayout;
 
@@ -25,6 +27,7 @@ public class VehicleStatusPanel extends ConfiguratorPanel implements IVehicleSta
     private void init()
     {
         add(_artificialHorizonPanel, BorderLayout.WEST);
+        add(new ReceiverPanel(new ReceiverPanelController()),BorderLayout.EAST);
 
     }
 
