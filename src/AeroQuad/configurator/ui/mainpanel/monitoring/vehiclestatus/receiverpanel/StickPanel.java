@@ -1,4 +1,4 @@
-package AeroQuad.configurator.ui.mainpanel.receiverpanel;
+package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;

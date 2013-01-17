@@ -4,8 +4,7 @@ import AeroQuad.configurator.model.VehicleAttitude;
 import AeroQuad.configurator.ui.ConfiguratorPanel;
 import AeroQuad.configurator.ui.IConfiguratorController;
 import AeroQuad.configurator.ui.artificialhorizon.drawer.ArtificialHorizonPanel;
-import AeroQuad.configurator.ui.mainpanel.receiverpanel.ReceiverPanel;
-import AeroQuad.configurator.ui.mainpanel.receiverpanel.ReceiverPanelController;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel.ReceiverPanel;
 
 import java.awt.BorderLayout;
 
@@ -15,20 +14,19 @@ public class VehicleStatusPanel extends ConfiguratorPanel implements IVehicleSta
 
     final ArtificialHorizonPanel _artificialHorizonPanel = new ArtificialHorizonPanel();
 
-    public VehicleStatusPanel(final IVehicleStatusController controller)
+    public VehicleStatusPanel(final IVehicleStatusController controller, final ReceiverPanel receiverPanel)
     {
         _controller = controller;
         _controller.setPanel(this);
         setLayout(new BorderLayout());
 
-        init();
+        init(receiverPanel);
     }
 
-    private void init()
+    private void init(final ReceiverPanel receiverPanel)
     {
         add(_artificialHorizonPanel, BorderLayout.WEST);
-        add(new ReceiverPanel(new ReceiverPanelController()),BorderLayout.EAST);
-
+        add(receiverPanel, BorderLayout.EAST);
     }
 
     @Override

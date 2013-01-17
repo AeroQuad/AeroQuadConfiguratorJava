@@ -18,7 +18,13 @@ public interface IAeroQuadModel
     final String BOARD_TYPE_PROPERTY_KEY = "BOARD_TYPE_PROPERTY_KEY";
     final String FLIGHT_SOFTWARE_VERSION_PROPERTY_KEY = "FLIGHT_SOFTWARE_VERSION_PROPERTY_KEY";
     final String MOTOR_ARMED_STATE_CHANGED = "MOTOR_ARMED_STATE_CHANGED";
+
     final String VEHICLE_ATTITUDE_STATE_CHANGE = "VEHICLE_ATTITUDE_STATE_CHANGE";
+    final String VEHICLE_ALTITUDE_STATE_CHANGE = "VEHICLE_ALTITUDE_STATE_CHANGE";
+    final String VEHICLE_ALTITUDE_HOLD_STATE_CHANGE = "VEHICLE_ALTITUDE_HOLD_STATE_CHANGE";
+    final String VEHICLE_VOLTAGE_STATE_CHANGE = "VEHICLE_VOLTAGE_STATE_CHANGE";
+    final String VEHICLE_FLIGHT_MODE_STATE_CHANGE = "VEHICLE_FLIGHT_MODE_STATE_CHANGE";
+
 
     void addListener(String propertyName, PropertyChangeListener propertyChangeListener);
 
@@ -38,15 +44,10 @@ public interface IAeroQuadModel
 
     void setMotorArmed(boolean armed);
     void setVehicleAttitude(VehicleAttitude vehicleAttitude);
-
     void setCurrentAltitude(float altitude);
     void setAltitudeHoldState(boolean altitudeHoldState);
-
-    void setReceiver(Receiver receiver);
-
-    void setMotors(Motors motors);
-
     void setCurrentVoltage(float currentVoltage);
-
     void setFlightMode(FlightMode flightMode);
+    void setChannelValue(ReceiverChannel channel, String value);
+    void setMotorCommandValue(MotorsIndex motor, String value);
 }

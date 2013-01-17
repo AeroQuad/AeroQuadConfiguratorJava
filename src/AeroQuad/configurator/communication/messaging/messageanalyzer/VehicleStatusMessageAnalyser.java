@@ -2,8 +2,8 @@ package AeroQuad.configurator.communication.messaging.messageanalyzer;
 
 import AeroQuad.configurator.model.FlightMode;
 import AeroQuad.configurator.model.IAeroQuadModel;
-import AeroQuad.configurator.model.Motors;
-import AeroQuad.configurator.model.Receiver;
+import AeroQuad.configurator.model.MotorsIndex;
+import AeroQuad.configurator.model.ReceiverChannel;
 import AeroQuad.configurator.model.VehicleAttitude;
 
 public class VehicleStatusMessageAnalyser implements IMessageAnalyser
@@ -32,27 +32,23 @@ public class VehicleStatusMessageAnalyser implements IMessageAnalyser
         final boolean altitudeHoldState = splittedData[5].equals("0") ? false : true;
         _aeroQuadModel.setAltitudeHoldState(altitudeHoldState);
 
-        final int channe1Value = Integer.parseInt(splittedData[6]);
-        final int channe2Value = Integer.parseInt(splittedData[7]);
-        final int channe3Value = Integer.parseInt(splittedData[8]);
-        final int channe4Value = Integer.parseInt(splittedData[9]);
-        final int channe5Value = Integer.parseInt(splittedData[10]);
-        final int channe6Value = Integer.parseInt(splittedData[11]);
-        final int channe7Value = Integer.parseInt(splittedData[12]);
-        final int channe8Value = Integer.parseInt(splittedData[13]);
-        final Receiver receiver = new Receiver(channe1Value, channe2Value, channe3Value, channe4Value, channe5Value, channe6Value, channe7Value, channe8Value);
-        _aeroQuadModel.setReceiver(receiver);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.ROLL, splittedData[6]);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.PITCH, splittedData[7]);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.YAW, splittedData[8]);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.THROTTLE, splittedData[9]);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.MODE, splittedData[10]);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.AUX1, splittedData[11]);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.AUX2, splittedData[12]);
+        _aeroQuadModel.setChannelValue(ReceiverChannel.AUX3, splittedData[13]);
 
-        final int motor1Value = Integer.parseInt(splittedData[14]);
-        final int motor2Value = Integer.parseInt(splittedData[15]);
-        final int motor3Value = Integer.parseInt(splittedData[16]);
-        final int motor4Value = Integer.parseInt(splittedData[17]);
-        final int motor5Value = Integer.parseInt(splittedData[18]);
-        final int motor6Value = Integer.parseInt(splittedData[19]);
-        final int motor7Value = Integer.parseInt(splittedData[20]);
-        final int motor8Value = Integer.parseInt(splittedData[21]);
-        final Motors motors = new Motors(motor1Value, motor2Value, motor3Value, motor4Value, motor5Value, motor6Value, motor7Value, motor8Value);
-        _aeroQuadModel.setMotors(motors);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR1, splittedData[14]);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR2, splittedData[15]);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR3, splittedData[16]);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR4, splittedData[17]);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR5, splittedData[18]);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR6, splittedData[19]);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR7, splittedData[20]);
+        _aeroQuadModel.setMotorCommandValue(MotorsIndex.MOTOR8, splittedData[21]);
 
         final float currentVoltage = Float.parseFloat(splittedData[22]);
         _aeroQuadModel.setCurrentVoltage(currentVoltage);

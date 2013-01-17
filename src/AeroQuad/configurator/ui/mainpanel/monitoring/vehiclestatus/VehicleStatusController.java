@@ -21,7 +21,6 @@ public class VehicleStatusController implements IVehicleStatusController
 
         _aeroQuadModel.addListener(IAeroQuadModel.VEHICLE_ATTITUDE_STATE_CHANGE, new PropertyChangeListener()
         {
-
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
