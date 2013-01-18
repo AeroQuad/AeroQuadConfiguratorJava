@@ -48,9 +48,11 @@ public class AQConfiguratorMainFrame extends JFrame
 
             final ReceiverPanel receiverPanel = new ReceiverPanel(new ReceiverPanelController(aeroQuadModel));
             final VehicleStatusController vehicleStatusController = new VehicleStatusController(aeroQuadModel, communicator);
-            final VehicleStatusPanel vehicleStatusPanel = new VehicleStatusPanel(vehicleStatusController, receiverPanel);
-            final SensorsMonitoringPanel sensorsMonitoringPanel = new SensorsMonitoringPanel(new SensorsMonitoringController(aeroQuadModel));
+            final MotorCommandPanel motorCommandDisplayPanel = new MotorCommandPanel(new MotorCommandController(aeroQuadModel));
+            final VehicleStatusPanel vehicleStatusPanel = new VehicleStatusPanel(vehicleStatusController, receiverPanel, motorCommandDisplayPanel);
             final MotorCommandPanel motorCommandPanel = new MotorCommandPanel(new MotorCommandController(aeroQuadModel));
+            final SensorsMonitoringPanel sensorsMonitoringPanel = new SensorsMonitoringPanel(new SensorsMonitoringController(aeroQuadModel));
+
 
             final MonitoringPanel monitoringPanel = new MonitoringPanel(
                     new MonitoringPanelController(communicator),
