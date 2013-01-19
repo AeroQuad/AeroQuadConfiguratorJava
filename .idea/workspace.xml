@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afae10c6-bd8d-46ee-955a-920ddfa63c7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/MathUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/IReceiverPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/IReceiverPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/motorcommand/MotorCommandPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/motorcommand/MotorCommandPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/ReceiverPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/ReceiverPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/ReceiverPanelController.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/ReceiverPanelController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/StickPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverpanel/StickPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AQ_PCRemoteController.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354751501484" ignored="false" />
     <file path="/fragment.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1355664040894" ignored="false" />
-    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358478205759" ignored="false" />
+    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358480545016" ignored="false" />
     <file path="/SerialCommunicator.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1355690103579" ignored="false" />
     <file path="/VehicleStatusMessageAnalyser.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358392969494" ignored="false" />
     <file path="/VehicleStatusPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358480502094" ignored="false" />
@@ -918,7 +910,11 @@
       <created>1358308629400</created>
       <updated>1358308629400</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Receiver panel and motor command panel work">
+      <created>1358480562248</created>
+      <updated>1358480562248</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1006,7 +1002,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="some work on status message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Receiver panel and motor command panel work" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1029,6 +1025,7 @@
     <MESSAGE value="Resizable artificial horizon widget!" />
     <MESSAGE value="Artificial Horizon, fully working" />
     <MESSAGE value="some work on status message" />
+    <MESSAGE value="Receiver panel and motor command panel work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
