@@ -10,4 +10,6 @@ public interface IMotorDisplayPanel
     void setMotor6CommandValue(String value);
     void setMotor7CommandValue(String value);
     void setMotor8CommandValue(String value);
+
+    void setNbMotor(int nbMotor);
 }

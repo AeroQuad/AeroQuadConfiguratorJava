@@ -100,6 +100,23 @@ public class MotorDisplayPanel extends ConfiguratorPanel implements IMotorDispla
     }
 
     @Override
+    public void setNbMotor(final int nbMotor)
+    {
+        if (nbMotor >= 6)
+        {
+            _gridLayout.setColumns(6);
+            add(_motor5Panel);
+            add(_motor6Panel);
+        }
+        if (nbMotor >= 8)
+        {
+            _gridLayout.setColumns(8);
+            add(_motor7Panel);
+            add(_motor8Panel);
+        }
+    }
+
+    @Override
     public IConfiguratorController getController()
     {
         return _controller;
@@ -152,4 +169,6 @@ public class MotorDisplayPanel extends ConfiguratorPanel implements IMotorDispla
     {
         _motor8Slider.setValue(Integer.parseInt(value));
     }
+
+
 }

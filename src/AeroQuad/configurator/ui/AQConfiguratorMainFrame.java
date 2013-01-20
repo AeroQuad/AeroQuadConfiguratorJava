@@ -18,6 +18,8 @@ import AeroQuad.configurator.ui.mainpanel.monitoring.serialmonitoring.SerialMoni
 import AeroQuad.configurator.ui.mainpanel.monitoring.serialmonitoring.SerialMonitoringPanelController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.VehicleStatusController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.VehicleStatusPanel;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.otherssensorsstatuspanel.OtherSensorsStatusPanel;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.otherssensorsstatuspanel.OtherSensorsStatusPanelController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay.ReceiverDisplayPanel;
 import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay.ReceiverPanelController;
 import AeroQuad.configurator.ui.mainpanel.setup.SetupPanel;
@@ -49,7 +51,8 @@ public class AQConfiguratorMainFrame extends JFrame
             final ReceiverDisplayPanel receiverPanel = new ReceiverDisplayPanel(new ReceiverPanelController(aeroQuadModel));
             final VehicleStatusController vehicleStatusController = new VehicleStatusController(aeroQuadModel, communicator);
             final MotorDisplayPanel motorCommandDisplayPanel = new MotorDisplayPanel(new MotorDisplayController(aeroQuadModel));
-            final VehicleStatusPanel vehicleStatusPanel = new VehicleStatusPanel(vehicleStatusController, receiverPanel, motorCommandDisplayPanel);
+            final OtherSensorsStatusPanel otherSensorsStatusPanel = new OtherSensorsStatusPanel(new OtherSensorsStatusPanelController(aeroQuadModel));
+            final VehicleStatusPanel vehicleStatusPanel = new VehicleStatusPanel(vehicleStatusController, receiverPanel, motorCommandDisplayPanel,otherSensorsStatusPanel);
             final MotorDisplayPanel motorCommandPanel = new MotorDisplayPanel(new MotorDisplayController(aeroQuadModel));
             final SensorsMonitoringPanel sensorsMonitoringPanel = new SensorsMonitoringPanel(new SensorsMonitoringController(aeroQuadModel));
 

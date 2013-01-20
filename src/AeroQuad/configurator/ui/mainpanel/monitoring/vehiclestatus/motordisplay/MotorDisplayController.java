@@ -12,6 +12,16 @@ public class MotorDisplayController implements IMotorDisplayController
 
     public MotorDisplayController(final IAeroQuadModel aeroQuadModel)
     {
+
+        aeroQuadModel.addListener(IAeroQuadModel.NB_MOTORS_PROPERTY_KEY,new PropertyChangeListener()
+        {
+            @Override
+            public void propertyChange(final PropertyChangeEvent evt)
+            {
+                _panel.setNbMotor((Integer)evt.getNewValue());
+            }
+        });
+
         aeroQuadModel.addListener(MotorsIndex.MOTOR1.toString(),new PropertyChangeListener()
         {
             @Override

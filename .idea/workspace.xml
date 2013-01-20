@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afae10c6-bd8d-46ee-955a-920ddfa63c7e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Working\AQConfiguratorJava\src\AeroQuad\configurator\ui\artificialhorizon\drawer\ArtificialHorizonPanel.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/IOtherSensorsStatusPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/IOtherSensorsStatusPanelController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/OtherSensorsStatusPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/OtherSensorsStatusPanelController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/model/FlightMode.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/model/FlightMode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayController.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" afterPath="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AQ_PCRemoteController.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354751501484" ignored="false" />
-    <file path="/fragment.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1355664040894" ignored="false" />
-    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358689802629" ignored="false" />
+    <file path="/fragment.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358690995549" ignored="false" />
+    <file path="/Dummy.txt" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358691519774" ignored="false" />
     <file path="/SerialCommunicator.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1355690103579" ignored="false" />
-    <file path="/VehicleStatusMessageAnalyser.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358392969494" ignored="false" />
-    <file path="/VehicleStatusPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358688053414" ignored="false" />
+    <file path="/VehicleStatusMessageAnalyser.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358701621617" ignored="false" />
+    <file path="/VehicleStatusPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358691322168" ignored="false" />
     <file path="/VehicleStatusController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354756466647" ignored="false" />
     <file path="/ArtificialHorizonController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1354754583990" ignored="false" />
     <file path="/IAeroQuadModel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358391603797" ignored="false" />
@@ -31,20 +41,24 @@
     <file path="/VehicleInfoMessageAnalyser.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1355690278906" ignored="false" />
     <file path="/Receiver.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358307622419" ignored="false" />
     <file path="/Motors.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358308060516" ignored="false" />
-    <file path="/FlightMode.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358308389090" ignored="false" />
+    <file path="/FlightMode.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358700067342" ignored="false" />
     <file path="/ReceiverChannel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358387195327" ignored="false" />
     <file path="/MotorsIndex.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358387297151" ignored="false" />
-    <file path="/AQConfiguratorMainFrame.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358480326522" ignored="false" />
+    <file path="/AQConfiguratorMainFrame.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358691111092" ignored="false" />
     <file path="/IReceiverPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358476254565" ignored="false" />
     <file path="/MathUtil.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358474510193" ignored="false" />
     <file path="/MotorCommandPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358688902935" ignored="false" />
     <file path="/IMotorCommandController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358688848206" ignored="false" />
     <file path="/IMotorCommandPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358688869013" ignored="false" />
     <file path="/MotorCommandController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358688885566" ignored="false" />
-    <file path="/MotorDisplayController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358689236569" ignored="false" />
-    <file path="/MotorDisplayPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358689417884" ignored="false" />
+    <file path="/MotorDisplayController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358701162622" ignored="false" />
+    <file path="/MotorDisplayPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358701344681" ignored="false" />
     <file path="/IMotorDisplayController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358689169313" ignored="false" />
-    <file path="/IMotorDisplayPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358689336758" ignored="false" />
+    <file path="/IMotorDisplayPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358701232800" ignored="false" />
+    <file path="/OtherSensorsStatusPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358700607960" ignored="false" />
+    <file path="/OtherSensorsStatusPanelController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358700568853" ignored="false" />
+    <file path="/IOtherSensorsStatusPanelController.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358691534764" ignored="false" />
+    <file path="/IOtherSensorsStatusPanel.java" changelist="afae10c6-bd8d-46ee-955a-920ddfa63c7e" time="1358700461749" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +73,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -94,7 +108,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -105,10 +119,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArtificialHorizonPanel.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/artificialhorizon/ArtificialHorizonPanel.java">
+      <file leaf-file-name="MotorDisplayController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="29" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.476">
+            <state line="20" column="29" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IMotorDisplayPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="24" selection-start="514" selection-end="521" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MotorDisplayPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="33" selection-start="3845" selection-end="3845" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VehicleStatusMessageAnalyser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="25" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.9478079">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReceiverDisplayPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/ReceiverDisplayPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IAeroQuadModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="39" selection-start="716" selection-end="738" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,22 +191,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/IReceiverPanel.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/IReceiverDisplayPanel.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/IReceiverPanelController.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/IReceiverDisplayPanelController.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/ReceiverPanel.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/ReceiverDisplayPanel.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorCommandController.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorCommandPanel.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorCommandController.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorCommandPanel.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayController.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/artificialhorizon/ArtificialHorizonPanel.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/IOtherSensorsStatusPanelController.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/model/FlightMode.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/IOtherSensorsStatusPanel.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/OtherSensorsStatusPanelController.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/OtherSensorsStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayController.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayPanel.java" />
         <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayPanel.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java" />
-        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/ui/artificialhorizon/ArtificialHorizonPanel.java" />
+        <option value="$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java" />
       </list>
     </option>
   </component>
@@ -519,6 +578,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mainpanel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monitoring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehiclestatus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="receiverdisplay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mainpanel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monitoring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vehiclestatus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="motordisplay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="artificialhorizon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -545,6 +680,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="communication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="communication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messaging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AQConfiguratorJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="communication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messaging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messageanalyzer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Favorites" />
@@ -564,17 +777,17 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.otherssensorsstatuspanel" />
       <recent name="AeroQuad.configurator.ui.mainpanel.receiverpanel" />
       <recent name="AeroQuad.configurator.communication.messaging" />
       <recent name="AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus" />
       <recent name="AeroQuad.configurator.ui.mainpanel.monitoring.motorcommand" />
-      <recent name="AeroQuad.configurator.ui" />
     </key>
   </component>
   <component name="RunManager" selected="Application.AQConfigurator">
@@ -758,7 +971,11 @@
       <created>1358689819144</created>
       <updated>1358689819144</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Receiver panel and motor command panel working">
+      <created>1358690548922</created>
+      <updated>1358690548922</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -892,74 +1109,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_09/src.zip!/javax/swing/SwingConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="437" selection-end="451" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_09/src.zip!/javax/swing/JSlider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="45" selection-start="8718" selection-end="8736" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/ConfiguratorPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="85" selection-end="85" vertical-scroll-proportion="0.15813954" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/MonitoringPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="68" selection-start="1201" selection-end="1218" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="70" selection-start="3188" selection-end="3188" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/IReceiverDisplayPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/IReceiverDisplayPanelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="33" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/ReceiverDisplayPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="28" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1358688823356" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/IConfiguratorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="98" selection-end="98" vertical-scroll-proportion="-0.05371248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="42" selection-start="258" selection-end="258" vertical-scroll-proportion="0.19883041">
@@ -967,37 +1116,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayController.java">
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/artificialhorizon/ArtificialHorizonPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="37" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0">
+        <state line="69" column="29" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.476">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/AQConfiguratorMainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="87" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.72319686">
+        <state line="53" column="134" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/VehicleStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="49" selection-start="279" selection-end="279" vertical-scroll-proportion="0.12839879">
+        <state line="14" column="13" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/artificialhorizon/ArtificialHorizonPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/IOtherSensorsStatusPanelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="29" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.476">
+        <state line="4" column="50" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/FlightMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/OtherSensorsStatusPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="28" selection-start="2691" selection-end="2691" vertical-scroll-proportion="-5.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/IOtherSensorsStatusPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="9" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/otherssensorsstatuspanel/OtherSensorsStatusPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/MotorsIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="68" selection-end="68" vertical-scroll-proportion="0.15077606">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/model/IAeroQuadModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="39" selection-start="716" selection-end="738" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/IMotorDisplayPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="514" selection-end="521" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/receiverdisplay/ReceiverDisplayPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/ui/mainpanel/monitoring/vehiclestatus/motordisplay/MotorDisplayPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="33" selection-start="3845" selection-end="3845" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AeroQuad/configurator/communication/messaging/messageanalyzer/VehicleStatusMessageAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="25" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.9478079">
           <folding />
         </state>
       </provider>
