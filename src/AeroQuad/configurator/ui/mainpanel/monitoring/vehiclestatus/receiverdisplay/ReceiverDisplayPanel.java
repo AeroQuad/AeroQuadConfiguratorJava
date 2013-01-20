@@ -1,13 +1,14 @@
-package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel;
+package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.SwingConstants;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 
-public class ReceiverPanel extends JPanel implements IReceiverPanel
+public class ReceiverDisplayPanel extends JPanel implements IReceiverDisplayPanel
 {
     private final StickPanel _throttleYawPanel = new StickPanel();
     private final StickPanel _rollPitchPanel = new StickPanel();
@@ -33,7 +34,7 @@ public class ReceiverPanel extends JPanel implements IReceiverPanel
     private final JSlider _aux7Slider = new JSlider();
 
 
-    public ReceiverPanel(final IReceiverPanelController controller)
+    public ReceiverDisplayPanel(final IReceiverDisplayPanelController controller)
     {
         controller.setPanel(this);
 
@@ -43,6 +44,8 @@ public class ReceiverPanel extends JPanel implements IReceiverPanel
     private void init()
     {
         setLayout(new BorderLayout());
+
+        setPreferredSize(new Dimension(0,250));
 
         add(_throttleYawPanel, BorderLayout.WEST);
         add(_rollPitchPanel,BorderLayout.EAST);

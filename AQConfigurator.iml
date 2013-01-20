@@ -6,9 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="JFreeChart" level="project" />
+    <orderEntry type="library" exported="" name="RxTxComm" level="project" />
+    <orderEntry type="library" exported="" name="JXInput" level="project" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="RxTxComm" level="project" />
-    <orderEntry type="library" name="JXInput" level="project" />
   </component>
 </module>
 

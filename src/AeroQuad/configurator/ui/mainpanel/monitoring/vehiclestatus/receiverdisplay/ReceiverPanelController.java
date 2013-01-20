@@ -1,4 +1,4 @@
-package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel;
+package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay;
 
 import AeroQuad.configurator.model.IAeroQuadModel;
 import AeroQuad.configurator.model.ReceiverChannel;
@@ -6,9 +6,9 @@ import AeroQuad.configurator.model.ReceiverChannel;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-public class ReceiverPanelController implements IReceiverPanelController
+public class ReceiverPanelController implements IReceiverDisplayPanelController
 {
-    private IReceiverPanel _panel;
+    private IReceiverDisplayPanel _panel;
 
     public ReceiverPanelController(final IAeroQuadModel aeroQuadModel)
     {
@@ -119,7 +119,7 @@ public class ReceiverPanelController implements IReceiverPanelController
     }
 
     @Override
-    public void setPanel(final IReceiverPanel panel)
+    public void setPanel(final IReceiverDisplayPanel panel)
     {
         _panel = panel;
     }
