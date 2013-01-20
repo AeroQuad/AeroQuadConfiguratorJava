@@ -1,4 +1,4 @@
-package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel;
+package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay;
 
 import AeroQuad.configurator.MathUtil;
 

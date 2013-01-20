@@ -6,7 +6,7 @@
  * created on: Feb 24, 2010
  *
  *********************************************/
-package AeroQuad.configurator.ui.artificialhorizon.drawer;
+package AeroQuad.configurator.ui.artificialhorizon;
 
 import AeroQuad.configurator.model.VehicleAttitude;
 
@@ -61,6 +61,10 @@ public class ArtificialHorizonPanel extends JPanel
         }
 
         setMinimumSize(new Dimension(200,200));
+
+        setPreferredSize(new Dimension(350,350));
+
+        setMinimumSize(new Dimension(350,350));
     }
 
 //    @Override
