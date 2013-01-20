@@ -1,6 +1,6 @@
-package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel;
+package AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay;
 
-public interface IReceiverPanel
+public interface IReceiverDisplayPanel
 {
     void setRollValue(String value);
 

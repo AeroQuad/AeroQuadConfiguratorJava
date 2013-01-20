@@ -4,10 +4,12 @@ import AeroQuad.configurator.model.VehicleAttitude;
 import AeroQuad.configurator.ui.ConfiguratorPanel;
 import AeroQuad.configurator.ui.IConfiguratorController;
 import AeroQuad.configurator.ui.artificialhorizon.drawer.ArtificialHorizonPanel;
-import AeroQuad.configurator.ui.mainpanel.monitoring.motorcommand.MotorCommandPanel;
-import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel.ReceiverPanel;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.motordisplay.MotorDisplayPanel;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay.ReceiverDisplayPanel;
 
+import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 
 public class VehicleStatusPanel extends ConfiguratorPanel implements IVehicleStatusPanel
 {
@@ -15,7 +17,7 @@ public class VehicleStatusPanel extends ConfiguratorPanel implements IVehicleSta
 
     final ArtificialHorizonPanel _artificialHorizonPanel = new ArtificialHorizonPanel();
 
-    public VehicleStatusPanel(final IVehicleStatusController controller, final ReceiverPanel receiverPanel, final MotorCommandPanel motorCommandPanel)
+    public VehicleStatusPanel(final IVehicleStatusController controller, final ReceiverDisplayPanel receiverPanel, final MotorDisplayPanel motorCommandPanel)
     {
         _controller = controller;
         _controller.setPanel(this);
@@ -24,12 +26,13 @@ public class VehicleStatusPanel extends ConfiguratorPanel implements IVehicleSta
         init(receiverPanel, motorCommandPanel);
     }
 
-    private void init(final ReceiverPanel receiverPanel, final MotorCommandPanel motorCommandPanel)
+    private void init(final ReceiverDisplayPanel receiverPanel, final MotorDisplayPanel motorCommandPanel)
     {
-//        final JPanel centerPanel = new JPanel(new BorderLayout());
+        final JPanel receiverMotorPanel = new JPanel(new GridLayout(2,1));
+        receiverMotorPanel.add(receiverPanel);
+        receiverMotorPanel.add(motorCommandPanel);
         add(_artificialHorizonPanel, BorderLayout.WEST);
-        add(receiverPanel, BorderLayout.NORTH);
-        add(motorCommandPanel, BorderLayout.CENTER);
+        add(receiverMotorPanel, BorderLayout.CENTER);
     }
 
     @Override

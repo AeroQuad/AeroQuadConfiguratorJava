@@ -10,16 +10,16 @@ import AeroQuad.configurator.ui.mainpanel.MainPanel;
 import AeroQuad.configurator.ui.mainpanel.MainPanelController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.MonitoringPanel;
 import AeroQuad.configurator.ui.mainpanel.monitoring.MonitoringPanelController;
-import AeroQuad.configurator.ui.mainpanel.monitoring.motorcommand.MotorCommandController;
-import AeroQuad.configurator.ui.mainpanel.monitoring.motorcommand.MotorCommandPanel;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.motordisplay.MotorDisplayController;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.motordisplay.MotorDisplayPanel;
 import AeroQuad.configurator.ui.mainpanel.monitoring.sensorsmonitoring.SensorsMonitoringController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.sensorsmonitoring.SensorsMonitoringPanel;
 import AeroQuad.configurator.ui.mainpanel.monitoring.serialmonitoring.SerialMonitoringPanel;
 import AeroQuad.configurator.ui.mainpanel.monitoring.serialmonitoring.SerialMonitoringPanelController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.VehicleStatusController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.VehicleStatusPanel;
-import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel.ReceiverPanel;
-import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverpanel.ReceiverPanelController;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay.ReceiverDisplayPanel;
+import AeroQuad.configurator.ui.mainpanel.monitoring.vehiclestatus.receiverdisplay.ReceiverPanelController;
 import AeroQuad.configurator.ui.mainpanel.setup.SetupPanel;
 import AeroQuad.configurator.ui.mainpanel.setup.SetupPanelController;
 import AeroQuad.configurator.ui.mainpanel.tuning.TuningPanel;
@@ -46,11 +46,11 @@ public class AQConfiguratorMainFrame extends JFrame
         {
             final SerialMonitoringPanel serialMonitoringPanel = new SerialMonitoringPanel(new SerialMonitoringPanelController(communicator));
 
-            final ReceiverPanel receiverPanel = new ReceiverPanel(new ReceiverPanelController(aeroQuadModel));
+            final ReceiverDisplayPanel receiverPanel = new ReceiverDisplayPanel(new ReceiverPanelController(aeroQuadModel));
             final VehicleStatusController vehicleStatusController = new VehicleStatusController(aeroQuadModel, communicator);
-            final MotorCommandPanel motorCommandDisplayPanel = new MotorCommandPanel(new MotorCommandController(aeroQuadModel));
+            final MotorDisplayPanel motorCommandDisplayPanel = new MotorDisplayPanel(new MotorDisplayController(aeroQuadModel));
             final VehicleStatusPanel vehicleStatusPanel = new VehicleStatusPanel(vehicleStatusController, receiverPanel, motorCommandDisplayPanel);
-            final MotorCommandPanel motorCommandPanel = new MotorCommandPanel(new MotorCommandController(aeroQuadModel));
+            final MotorDisplayPanel motorCommandPanel = new MotorDisplayPanel(new MotorDisplayController(aeroQuadModel));
             final SensorsMonitoringPanel sensorsMonitoringPanel = new SensorsMonitoringPanel(new SensorsMonitoringController(aeroQuadModel));
 
 
