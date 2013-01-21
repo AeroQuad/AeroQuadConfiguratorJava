@@ -44,8 +44,8 @@ public class SensorsMonitoringPanel extends ConfiguratorPanel implements ISensor
             }
         });
 
-        _plotPanel.add(new PlotDrawerPanel());
-        _plotPanel.add(new PlotDrawerPanel());
+        _plotPanel.add(new PlotDrawerPanel("Accel"));
+        _plotPanel.add(new PlotDrawerPanel("Gyro"));
     }
 
     @Override
@@ -58,6 +58,12 @@ public class SensorsMonitoringPanel extends ConfiguratorPanel implements ISensor
     public void setHaveMagnetometer(final boolean value)
     {
         _sensorsTree.setHaveMagnetometer(value);
+        if (value)
+        {
+            _plotPanelsLayout.setRows(3);
+            _plotPanel.add(new PlotDrawerPanel("Magnetometer"));
+        }
+
     }
 
 }

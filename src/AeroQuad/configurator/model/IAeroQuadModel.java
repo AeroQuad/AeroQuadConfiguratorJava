@@ -2,6 +2,9 @@ package AeroQuad.configurator.model;
 
 import java.beans.PropertyChangeListener;
 
+/**
+ * FAT INTERFACE FAT INTERFACE
+ */
 public interface IAeroQuadModel
 {
     final String GPS_PROPERTY_KEY = "GPS_PROPERTY_KEY";
@@ -24,6 +27,16 @@ public interface IAeroQuadModel
     final String VEHICLE_ALTITUDE_HOLD_STATE_CHANGE = "VEHICLE_ALTITUDE_HOLD_STATE_CHANGE";
     final String VEHICLE_VOLTAGE_STATE_CHANGE = "VEHICLE_VOLTAGE_STATE_CHANGE";
     final String VEHICLE_FLIGHT_MODE_STATE_CHANGE = "VEHICLE_FLIGHT_MODE_STATE_CHANGE";
+
+    final String SENSOR_GYRO_X_VALUE_CHANGE = "SENSOR_GYRO_X_VALUE_CHANGE";
+    final String SENSOR_GYRO_Y_VALUE_CHANGE = "SENSOR_GYRO_Y_VALUE_CHANGE";
+    final String SENSOR_GYRO_Z_VALUE_CHANGE = "SENSOR_GYRO_Z_VALUE_CHANGE";
+    final String SENSOR_ACCEL_X_VALUE_CHANGE = "SENSOR_ACCEL_X_VALUE_CHANGE";
+    final String SENSOR_ACCEL_Y_VALUE_CHANGE = "SENSOR_ACCEL_Y_VALUE_CHANGE";
+    final String SENSOR_ACCEL_Z_VALUE_CHANGE = "SENSOR_ACCEL_Z_VALUE_CHANGE";
+    final String SENSOR_MAG_X_VALUE_CHANGE = "SENSOR_MAG_X_VALUE_CHANGE";
+    final String SENSOR_MAG_Y_VALUE_CHANGE = "SENSOR_MAG_Y_VALUE_CHANGE";
+    final String SENSOR_MAG_Z_VALUE_CHANGE = "SENSOR_MAG_Z_VALUE_CHANGE";
 
 
     void addListener(String propertyName, PropertyChangeListener propertyChangeListener);
@@ -50,4 +63,15 @@ public interface IAeroQuadModel
     void setFlightMode(FlightMode flightMode);
     void setChannelValue(ReceiverChannel channel, String value);
     void setMotorCommandValue(MotorsIndex motor, String value);
+
+
+    void setGyroXValue(String value);
+    void setGyroYValue(String value);
+    void setGyroZValue(String value);
+    void setAccelXValue(String value);
+    void setAccelYValue(String value);
+    void setAccelZValue(String value);
+    void setMagXValue(String value);
+    void setMagYValue(String value);
+    void setMagZValue(String value);
 }

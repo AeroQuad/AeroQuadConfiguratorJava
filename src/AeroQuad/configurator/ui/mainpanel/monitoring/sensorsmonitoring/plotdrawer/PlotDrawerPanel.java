@@ -18,12 +18,12 @@ import java.awt.Dimension;
 
 public class PlotDrawerPanel extends JPanel
 {
-    public PlotDrawerPanel()
+    public PlotDrawerPanel(final String sensorName)
     {
 
         setLayout(new BorderLayout());
         final CategoryDataset dataset = createDataset();
-        final JFreeChart chart = createChart(dataset);
+        final JFreeChart chart = createChart(dataset,sensorName);
         final ChartPanel chartPanel = new ChartPanel(chart);
         chartPanel.setPreferredSize(new Dimension(500, 270));
         add(chartPanel,BorderLayout.CENTER);
@@ -37,9 +37,9 @@ public class PlotDrawerPanel extends JPanel
     private CategoryDataset createDataset() {
 
         // row keys...
-        final String series1 = "First";
-        final String series2 = "Second";
-        final String series3 = "Third";
+        final String series1 = "X";
+        final String series2 = "Y";
+        final String series3 = "Z";
 
         // column keys...
         final String type1 = "Type 1";
@@ -84,11 +84,11 @@ public class PlotDrawerPanel extends JPanel
         return dataset;
     }
 
-    private JFreeChart createChart(final CategoryDataset dataset) {
+    private JFreeChart createChart(final CategoryDataset dataset, final String sensorName) {
 
         // create the chart...
         final JFreeChart chart = ChartFactory.createLineChart(
-                "Line Chart Demo 1",       // chart title
+                sensorName,       // chart title
                 "Type",                    // domain axis label
                 "Value",                   // range axis label
                 dataset,                   // data
@@ -135,14 +135,12 @@ public class PlotDrawerPanel extends JPanel
                 0, new BasicStroke(
                 2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND,
                 1.0f, new float[] {10.0f, 6.0f}, 0.0f
-        )
-        );
+        ));
         renderer.setSeriesStroke(
                 1, new BasicStroke(
                 2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND,
                 1.0f, new float[] {6.0f, 6.0f}, 0.0f
-        )
-        );
+        ));
         renderer.setSeriesStroke(
                 2, new BasicStroke(
                 2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND,
