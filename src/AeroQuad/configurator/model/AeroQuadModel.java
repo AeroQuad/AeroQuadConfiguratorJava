@@ -3,6 +3,8 @@ package AeroQuad.configurator.model;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
+
+
 public class AeroQuadModel implements IAeroQuadModel
 {
     private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(this);
@@ -140,6 +142,62 @@ public class AeroQuadModel implements IAeroQuadModel
     public void setMotorCommandValue(final MotorsIndex motor, final String value)
     {
         _propertyChangeSupport.firePropertyChange(motor.toString(), null, value);
+    }
+
+
+
+    @Override
+    public void setGyroXValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_GYRO_X_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setGyroYValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_GYRO_Y_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setGyroZValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_GYRO_Z_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setAccelXValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_ACCEL_X_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setAccelYValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_ACCEL_Y_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setAccelZValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_ACCEL_Z_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setMagXValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_MAG_X_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setMagYValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_MAG_Y_VALUE_CHANGE, null, value);
+    }
+
+    @Override
+    public void setMagZValue(final String value)
+    {
+        _propertyChangeSupport.firePropertyChange(SENSOR_MAG_Z_VALUE_CHANGE, null, value);
     }
 
 }
