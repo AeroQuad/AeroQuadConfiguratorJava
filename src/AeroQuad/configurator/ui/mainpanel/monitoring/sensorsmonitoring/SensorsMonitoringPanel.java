@@ -19,6 +19,10 @@ public class SensorsMonitoringPanel extends ConfiguratorPanel implements ISensor
     private final GridLayout _plotPanelsLayout = new GridLayout(2, 1);
     private final JPanel _plotPanel = new JPanel(_plotPanelsLayout);
 
+    final PlotDrawerPanel _accelPlotDrawerPanel = new PlotDrawerPanel("Accel");
+    final PlotDrawerPanel _gyroPlotDrawerPanel = new PlotDrawerPanel("Gyro");
+    final PlotDrawerPanel _magPlotDrawerPanel = new PlotDrawerPanel("Magnetometer");
+
     public SensorsMonitoringPanel(final ISensorsMonitoringController controller)
     {
         _controller = controller;
@@ -44,8 +48,8 @@ public class SensorsMonitoringPanel extends ConfiguratorPanel implements ISensor
             }
         });
 
-        _plotPanel.add(new PlotDrawerPanel("Accel"));
-        _plotPanel.add(new PlotDrawerPanel("Gyro"));
+        _plotPanel.add(_gyroPlotDrawerPanel);
+        _plotPanel.add(_accelPlotDrawerPanel);
     }
 
     @Override
@@ -61,9 +65,63 @@ public class SensorsMonitoringPanel extends ConfiguratorPanel implements ISensor
         if (value)
         {
             _plotPanelsLayout.setRows(3);
-            _plotPanel.add(new PlotDrawerPanel("Magnetometer"));
+            _plotPanel.add(_magPlotDrawerPanel);
         }
 
+    }
+
+    @Override
+    public void setGyroX(final String value)
+    {
+        _gyroPlotDrawerPanel.addXValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setGyroY(final String value)
+    {
+        _gyroPlotDrawerPanel.addYValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setGyroZ(final String value)
+    {
+        _gyroPlotDrawerPanel.addZValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setAccelX(final String value)
+    {
+        _accelPlotDrawerPanel.addXValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setAccelY(final String value)
+    {
+        _accelPlotDrawerPanel.addYValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setAccelZ(final String value)
+    {
+        _accelPlotDrawerPanel.addZValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setMagX(final String value)
+    {
+        _magPlotDrawerPanel.addXValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setMagY(final String value)
+    {
+        _magPlotDrawerPanel.addYValue(Float.parseFloat(value));
+    }
+
+    @Override
+    public void setMagZ(final String value)
+    {
+        _magPlotDrawerPanel.addZValue(Float.parseFloat(value));
     }
 
 }
