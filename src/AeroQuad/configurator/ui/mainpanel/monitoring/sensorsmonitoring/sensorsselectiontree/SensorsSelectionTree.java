@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SensorsSelectionTree extends JTree
+public class SensorsSelectionTree extends JTree implements ISensorsSelectionTree
 {
     private final String ROOT_STRING_NAME = "Aeroquad";
     final DefaultMutableTreeNode _root = new DefaultMutableTreeNode(ROOT_STRING_NAME);
@@ -32,22 +32,20 @@ public class SensorsSelectionTree extends JTree
 
     private void init()
     {
-        final DefaultMutableTreeNode accel = new DefaultMutableTreeNode("Accel");
-        accel.add(new DefaultMutableTreeNode("X"));
-        accel.add(new DefaultMutableTreeNode("Y"));
-        accel.add(new DefaultMutableTreeNode("Z"));
-
         final DefaultMutableTreeNode gyro = new DefaultMutableTreeNode("Gyro");
         gyro.add(new DefaultMutableTreeNode("X"));
         gyro.add(new DefaultMutableTreeNode("Y"));
         gyro.add(new DefaultMutableTreeNode("Z"));
-
-        _root.add(accel);
         _root.add(gyro);
 
-        setModel(_treeModel);
+        final DefaultMutableTreeNode accel = new DefaultMutableTreeNode("Accel");
+        accel.add(new DefaultMutableTreeNode("X"));
+        accel.add(new DefaultMutableTreeNode("Y"));
+        accel.add(new DefaultMutableTreeNode("Z"));
+        _root.add(accel);
 
-        setEditable(true);
+
+        setModel(_treeModel);
 
         getSelectionModel().setSelectionMode(TreeSelectionModel.CONTIGUOUS_TREE_SELECTION);
 

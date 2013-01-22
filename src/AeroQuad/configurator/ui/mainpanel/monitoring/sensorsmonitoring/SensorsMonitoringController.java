@@ -32,7 +32,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setGyroX((String)evt.getNewValue());
             }
         });
 
@@ -41,7 +41,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setGyroY((String)evt.getNewValue());
             }
         });
 
@@ -50,7 +50,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setGyroZ((String)evt.getNewValue());
             }
         });
 
@@ -59,7 +59,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setAccelX((String)evt.getNewValue());
             }
         });
 
@@ -68,7 +68,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setAccelY((String)evt.getNewValue());
             }
         });
 
@@ -77,7 +77,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setAccelZ((String)evt.getNewValue());
             }
         });
 
@@ -86,7 +86,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setMagX((String)evt.getNewValue());
             }
         });
 
@@ -95,7 +95,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setMagY((String)evt.getNewValue());
             }
         });
 
@@ -104,7 +104,7 @@ public class SensorsMonitoringController implements ISensorsMonitoringController
             @Override
             public void propertyChange(final PropertyChangeEvent evt)
             {
-
+                _panel.setMagZ((String)evt.getNewValue());
             }
         });
 
