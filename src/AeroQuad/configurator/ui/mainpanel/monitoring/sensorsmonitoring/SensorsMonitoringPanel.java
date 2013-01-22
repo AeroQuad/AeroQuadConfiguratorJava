@@ -3,6 +3,7 @@ package AeroQuad.configurator.ui.mainpanel.monitoring.sensorsmonitoring;
 import AeroQuad.configurator.ui.ConfiguratorPanel;
 import AeroQuad.configurator.ui.IConfiguratorController;
 import AeroQuad.configurator.ui.mainpanel.monitoring.sensorsmonitoring.plotdrawer.PlotDrawerPanel;
+import AeroQuad.configurator.ui.mainpanel.monitoring.sensorsmonitoring.sensorsselectiontree.ISensorsSelectionTree;
 import AeroQuad.configurator.ui.mainpanel.monitoring.sensorsmonitoring.sensorsselectiontree.SensorsSelectionTree;
 import AeroQuad.configurator.ui.mainpanel.monitoring.sensorsmonitoring.sensorsselectiontree.TreeSelectionChangeListener;
 
@@ -50,7 +51,17 @@ public class SensorsMonitoringPanel extends ConfiguratorPanel implements ISensor
 
         _plotPanel.add(_gyroPlotDrawerPanel);
         _plotPanel.add(_accelPlotDrawerPanel);
+
+        _sensorsTree.addSelectionChangeListener(new TreeSelectionChangeListener()
+        {
+            @Override
+            public void selectionChanged(final String key, final boolean selected)
+            {
+                analyseTreeChangedEvent(key, selected);
+            }
+        });
     }
+
 
     @Override
     public IConfiguratorController getController()
@@ -122,6 +133,70 @@ public class SensorsMonitoringPanel extends ConfiguratorPanel implements ISensor
     public void setMagZ(final String value)
     {
         _magPlotDrawerPanel.addZValue(Float.parseFloat(value));
+    }
+
+
+
+    private void analyseTreeChangedEvent(final String key, final boolean selected)
+    {
+        if (key.equals(ISensorsSelectionTree.GYRO_X_KEY))
+        {
+            _gyroPlotDrawerPanel.setXVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.GYRO_Y_KEY))
+        {
+            _gyroPlotDrawerPanel.setYVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.GYRO_Z_KEY))
+        {
+            _gyroPlotDrawerPanel.setZVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.GYRO_KEY))
+        {
+            _gyroPlotDrawerPanel.setXVisible(selected);
+            _gyroPlotDrawerPanel.setYVisible(selected);
+            _gyroPlotDrawerPanel.setZVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.ACCEL_X_KEY))
+        {
+            _accelPlotDrawerPanel.setXVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.ACCEL_Y_KEY))
+        {
+            _accelPlotDrawerPanel.setYVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.ACCEL_Z_KEY))
+        {
+            _accelPlotDrawerPanel.setZVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.ACCEL_KEY))
+        {
+            _accelPlotDrawerPanel.setXVisible(selected);
+            _accelPlotDrawerPanel.setYVisible(selected);
+            _accelPlotDrawerPanel.setZVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.MAG_X_KEY))
+        {
+            _magPlotDrawerPanel.setXVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.MAG_Y_KEY))
+        {
+            _magPlotDrawerPanel.setYVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.MAG_Z_KEY))
+        {
+            _magPlotDrawerPanel.setZVisible(selected);
+        }
+        else if (key.equals(ISensorsSelectionTree.MAG_KEY))
+        {
+            _magPlotDrawerPanel.setXVisible(selected);
+            _magPlotDrawerPanel.setYVisible(selected);
+            _magPlotDrawerPanel.setZVisible(selected);
+        }
+        else
+        {
+            System.err.println("unsuported tree key");
+        }
     }
 
 }

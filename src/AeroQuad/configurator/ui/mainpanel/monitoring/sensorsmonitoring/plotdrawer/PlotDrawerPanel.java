@@ -17,9 +17,12 @@ import java.awt.Dimension;
 
 public class PlotDrawerPanel extends JPanel
 {
-    private TimeSeries xSeries = new TimeSeries("X");
-    private TimeSeries ySeries = new TimeSeries("Y");
-    private TimeSeries zSeries = new TimeSeries("Z");
+    private TimeSeries _xSeries = new TimeSeries("X");
+    private TimeSeries _ySeries = new TimeSeries("Y");
+    private TimeSeries _zSeries = new TimeSeries("Z");
+    private boolean _xVisible = true;
+    private boolean _yVisible = true;
+    private boolean _zVisible = true;
 
     public PlotDrawerPanel(final String sensorName)
     {
@@ -30,9 +33,9 @@ public class PlotDrawerPanel extends JPanel
     {
         setLayout(new BorderLayout());
 
-        final TimeSeriesCollection xTimeSeriesCollection = new TimeSeriesCollection(xSeries);
-        final TimeSeriesCollection yTimeSeriesCollection = new TimeSeriesCollection(ySeries);
-        final TimeSeriesCollection zTimeSeriesCollection = new TimeSeriesCollection(zSeries);
+        final TimeSeriesCollection xTimeSeriesCollection = new TimeSeriesCollection(_xSeries);
+        final TimeSeriesCollection yTimeSeriesCollection = new TimeSeriesCollection(_ySeries);
+        final TimeSeriesCollection zTimeSeriesCollection = new TimeSeriesCollection(_zSeries);
 
         final JFreeChart chart = ChartFactory.createTimeSeriesChart(sensorName, "Time", "Value", xTimeSeriesCollection, true, true, false);
 
@@ -57,16 +60,40 @@ public class PlotDrawerPanel extends JPanel
 
     public void addXValue(final float xValue)
     {
-        xSeries.addOrUpdate(new Millisecond(), xValue);
+        if (_xVisible)
+        {
+            _xSeries.addOrUpdate(new Millisecond(), xValue);
+        }
     }
 
     public void addYValue(final float yValue)
     {
-        ySeries.addOrUpdate(new Millisecond(), yValue);
+        if (_yVisible)
+        {
+            _ySeries.addOrUpdate(new Millisecond(), yValue);
+        }
     }
 
     public void addZValue(final float zValue)
     {
-        zSeries.addOrUpdate(new Millisecond(), zValue);
+        if (_zVisible)
+        {
+            _zSeries.addOrUpdate(new Millisecond(), zValue);
+        }
+    }
+
+    public void setXVisible(final boolean XVisible)
+    {
+        _xVisible = XVisible;
+    }
+
+    public void setYVisible(final boolean YVisible)
+    {
+        _yVisible = YVisible;
+    }
+
+    public void setZVisible(final boolean ZVisible)
+    {
+        _zVisible = ZVisible;
     }
 }
